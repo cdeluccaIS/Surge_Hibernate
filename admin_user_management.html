@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--scc main header-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>SCC Admin Home Page</title>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+    </head>
+    <body>
+        <div id="container">
+            <div id="sccHeader">
+                <div id="sccHeaderContent">
+                    <div class="logo">
+                        <a href="#" target="_parent">
+                            <img src="images/scc.png" alt="SCC Logo" width="120" height="110" border="0">
+                        </a>
+                    </div>
+                    <div id="logoText">
+                        <p>Security Coordination Center</p>
+                    </div>
+                    <div id="sccMainNav">
+                        <ul>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+                    <div id="sccSecondNav">
+                        <ul>
+                            <li><a href="#" >User: TestUsername</a></li>
+                            <li><a href="#" >Log Off</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="sccNav">
+                <ul class="nav nav-pills nav-fill">
+                    <li class="nav-item">    
+                        <a class="nav-link" href="admin_home_page.html">Home</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-item nav-link active" href="admin_user_management.html">User Management</a></li>
+                    <li class="nav-item"><a class="nav-item nav-link" href="">Ingest Status</a></li>
+                    <li class="nav-item"><a class="nav-item nav-link" href="admin_dataIngest.html">Data Ingest Process</a></li>
+                    <li class="nav-item"><a class="nav-item nav-link" href="admin_documentation.html">Documentation</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">General Settings</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Application Setting</a>
+                            <a class="dropdown-item" href="admin_user_management.html">User Management</a>
+                            <a class="dropdown-item" href="#">Security Settings</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Another link</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="content">
+                <!--content wrapper-->
+                <div id="contentWrapper">
+                    <div class="container" style="padding-top:75px;">
+                        <div class="row">
+                            <div class="col-md-4 order-md-1 mb-4">
+                                <ul class="nav nav-pills nav-justified flex-column">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="add-new-user-button" href="admin_add_user.html">Create New User</a>
+                                    </li>
+                                </ul>
+                                <div class="my-3 p-3 rounded box-shadow">
+                                    <ul class="nav nav-pills nav-justified flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#">Modify User</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Suspend User</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Delete User</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-8 order-md-2 border">
+                                <h2 class="mb-3" style="text-align: center;">User Management</h2>
+                                <div class="row">
+                                    <div class="col-md-4 order-md-1 mb-4">
+                                        <ul class="nav nav-pills nav-justified flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link active border" href="#">Management Users</a>
+                                            </li>
+                                            <li class="nav-item border">
+                                                <a class="nav-link" href="#">Pending Users</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-8 order-md-2 border">
+                                        <h2 class="mb-3" style="text-align: center;">Tim1184</h2>
+                                        <table class="table">
+                                            <tr>
+                                                <th scope="row">Username</th>
+                                                <td><a href="#">Tim1184</a></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Full Name</th>
+                                                <td><a href="#">Timothy Varner</a></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Agency Affiliation</th>
+                                                <td><a href="#">System Administrator</a></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Account Type</th>
+                                                <td><a href="#">User</a></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Registration Date</th>
+                                                <td><a href="#">January 2 ,2018</a></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Account Status</th>
+                                                <td><a href="#">Active</a></td>
+                                            </tr>
+                                        </table>
+                                        <hr class="mb-4">
+                                        <table class="table table-striped">
+                                            <tr>
+                                                <td style="text-align: center;">Diana0684</td>
+                                                <td><input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: center;">Jim1982</td>
+                                                <td><input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."></td>
+                                           
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: center;">Shawn2922</td>
+                                                <td><input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."></td>
+                                           
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: center;">Roger2123</td>
+                                                <td><input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."></td>
+                                           
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <footer class="my-5 pt-5 text-muted text-center text-small">
+                <p class="mb-1">© 2018 SCC Management System</p>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#">SCC Website </a></li>|
+                    <li class="list-inline-item"><a href="#">Contact </a></li>|
+                    <li class="list-inline-item"><a href="#">About </a></li>
+                </ul>
+            </footer>
+        </div><!--end of container-->		
+    </body>
+</html>

@@ -1,0 +1,273 @@
+@charset "UTF-8";
+
+/************* SCC Main Header *************/
+body, html { 
+    margin: 0;
+    font-family: Open Sans;
+}
+
+h2{
+    font-family: Open Sans;
+    font-size: 30px;
+}
+
+h3{
+    font-family: Open Sans;
+    font-size: 20px;
+}
+
+p{
+    font-family: Open Sans;
+    font-size: 14px;
+}
+
+#sccHeader {
+	width:100%;
+	height: 130px;
+	position: relative;
+	background-color: #337AB7;
+	margin:0;
+	padding:0;
+}
+#sccHeaderContent {
+	height: 130px;
+        width: 100%;
+        position: relative;
+        margin: auto;
+}
+#sccHeaderContent .logo {
+	height: 110px;
+        width: 700px;
+	position: absolute;
+	left: 1px;
+	top: 10px;
+}
+
+#logoText {
+    width: 700px;
+    position: absolute;
+    left: 140px;
+    top: 30px;
+}
+
+#logoText p{
+    display: block;
+    color: white;
+    font-size: 40px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+/*// navigation*/
+
+#sccMainNav {
+    height: 55px;
+    position: absolute;
+    right: 0px;
+    width: 307px;
+    top: -10px;
+}
+
+#sccMainNav ul {
+	margin: 0px;
+	list-style:none;
+	position: absolute;
+	right: 0px;
+        top: 17px;
+	float: left;
+	width: 350px;
+}
+
+#sccSecondNav {
+    height: 55px;
+    position: absolute;
+    right: 0px;
+    width: 307px;
+    top: 55px;
+}
+#sccSecondNav ul {
+	margin: 0px;
+	list-style:none;
+	position: absolute;
+	right: 0px;
+	float: left;
+	width: 350px;
+}
+
+#sccMainNav li,#sccSeconNav li {
+	float: left;
+}
+#sccMainNav li a:link, #sccMainNav li a:visited ,#sccSecondNav li a:link, #sccSecondNav li a:visited  {
+	height: 55px;
+	display: block;
+	color: white;
+	font-size: 0.8em;
+	font-weight: bold;
+	text-decoration: none;
+	padding-top: 1.7em;
+	padding-right: 0.85em;
+	padding-bottom: 0;
+	padding-left: 0.85em;
+	float: left;
+
+}
+#sccMainNav li a:hover, #sccMainNav li a:active,#sccSecondNav li a:hover, #sccSecondNav li a:active  {
+	text-decoration: underline;
+}
+
+#sccNav {
+    width: 100%;
+    position: relative;
+    background-color: #CECECE;
+    margin-top: 0px;
+    margin-right: 0;
+    margin-left: 0;
+    z-index: 1;
+}
+
+#topNavWrapper {
+    margin: auto;
+    position: relative;
+    width: 1000px;
+    height: 28px;
+}
+
+#topnav {
+    width: 100%;
+}
+#topnav ul {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#topnav li {
+    float: left;
+    position: relative;
+    width: 33.3333%;
+    display: table;
+}
+
+#topnav a {
+	display: block;
+	text-decoration: none;
+	font-size: .75em;
+	color: #337AB7;
+	padding: .65em .9em .6em .9em;
+	font-weight: bold;
+}
+
+#topnav a:hover {
+	background:#0a304e;
+	color:#F4F4F4;
+	text-decoration: none;
+}
+
+#topnav ul li a:hover {
+	background:#315f80;
+}
+
+#contentWrapper {
+    margin: 0;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    clear: both;
+}
+
+#contentContainer {
+    width: 900px;
+    margin: auto;
+    position: relative;
+}
+
+#CenterCol {
+    border: 0 solid #CCCCCC;
+    float: left;
+    margin-top: 10px;
+    min-height: 508px;
+    position: relative;
+    width: 1000px;
+}
+
+#DocList a {
+    display: block;
+    text-decoration-color: currentcolor;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    color: #337AB7;
+    padding: .65em .9em .6em .9em;
+    font-weight: bold;
+}
+
+#footer {
+    width: 100%;
+    position: relative;
+    background-color: #0a304e;
+    border-top: 2px solid #C8CACB;
+    background-repeat: repeat-x;
+    background-position: top;
+    margin: 30px 0 0 0;
+}
+
+.simpleFooterMCol {
+    float: left;
+    position: relative;
+    margin: 15px 0 0 0;
+}
+
+.legal {
+    position: relative;
+    width: 500px;
+    margin: auto;
+    margin-bottom: auto;
+    margin-bottom: 40px;
+}
+/*CSS Bootstrap overwrited propreties*/
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    background-color: #E7B539;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #E7B539;
+    border-color: #E7B539;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #D2A024;
+    border-color: #E7B539;
+}
+
+.my-3{
+    background-color: #CECECE;
+}
+
+#usertypelabel  {
+    padding-top: 0px;
+}
+
+#add-new-user-button{
+    background-color: #337AB7;
+    border-color: #337AB7;
+}
+
+#add-new-user-button:hover{
+    color: #fff;
+     background-color: #007bff;
+    border-color: #007bff;
+}
+
+.progress {
+    position: relative;
+}
+
+.progress span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    color: black;
+ }
+ 
