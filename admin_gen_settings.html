@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--scc main header-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>SCC Admin General Settings</title>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+    </head>
+    <body>
+        <div id="container">
+            <div id="sccHeader">
+                <div id="sccHeaderContent">
+                    <div class="logo">
+                        <a href="#" target="_parent">
+                            <img src="images/scc.png" alt="SCC Logo" width="120" height="110" border="0">
+                        </a>
+                    </div>
+                    <div id="logoText">
+                        <p>Security Coordination Center</p>
+                    </div>
+                    <div id="sccMainNav">
+                        <ul>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+                    <div id="sccSecondNav">
+                        <ul>
+                            <li><a href="#" >User: TestUsername</a></li>
+                            <li><a href="#" >Log Off</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="sccNav">
+                <ul class="nav nav-pills nav-fill">
+                    <li class="nav-item">    
+                        <a class="nav-link" href="admin_home_page.html">Home</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-item nav-link" href="admin_upload.html">Upload</a></li>
+                    <li class="nav-item"><a class="nav-item nav-link" href="admin_dataIngest.html">Data Ingest Process</a></li>
+                    <li class="nav-item"><a class="nav-item nav-link" href="admin_user_management.html">User Management</a></li>
+                    <li class="nav-item"><a class="nav-item nav-link" href="admin_documentation.html">Documentation</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#">General Settings</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="admin_gen_settings.html">Application Setting</a>
+                            <a class="dropdown-item" href="admin_user_management.html">User Management</a>
+                            <a class="dropdown-item" href="#">Security Settings</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Another link</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="content">
+                <!--content wrapper-->
+                <div id="contentWrapper">
+                    <div class="container" style="padding-top:75px;">
+                        <div class="row">
+                            <div class="col-md-4 order-md-1 mb-4">
+                                <ul class="nav nav-pills nav-justified flex-column">
+                                    <li class="nav-item">
+                                        <a class="btn btn-primary btn-lg btn-block" href="admin_add_user.html">Application Settings</a>
+                                    </li>
+                                    <li class="nav-item">    
+                                        <div class="pt-3">
+                                            <a class="btn btn-primary btn-lg btn-block" href="admin_add_user.html">Security Settings</a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">    
+                                        <div class="pt-3">
+                                            <a class="btn btn-primary btn-lg btn-block" href="admin_add_user.html">Documentation</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-8 order-md-2 border">
+                                <div class="row">
+                                    <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="pills-general-tab" data-toggle="pill" href="#pills-general" role="tab" aria-controls="pills-general" aria-selected="true">General</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="pills-admin-tab" data-toggle="pill" href="#pills-admin" role="tab" aria-controls="pills-admin" aria-selected="false">Admin</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="pills-sysnote-tab" data-toggle="pill" href="#pills-sysnote" role="tab" aria-controls="pills-sysnote" aria-selected="false">System Notice</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="pills-ai-tab" data-toggle="pill" href="#pills-ai" role="tab" aria-controls="pills-ai" aria-selected="false">Application Information</a>
+                                        </li>
+
+                                    </ul>
+                                    <div class="tab-content" id="pills-tabContent">
+                                        <div class="tab-pane fade show active" id="pills-general" role="tabpanel" aria-labelledby="pills-home-tab">
+
+                                            <table class="table">
+                                                <tbody>
+                                                    <!--                                                <tr>
+                                                                                                        <th scope="row">Set The Time Zone</th>
+                                                                                                    </tr>-->
+                                                    <tr>
+                                                        <th scope="row">Timezone</th>
+                                                        <td><select name="DropDownTimezone" id="DropDownTimezone">
+                                                                <option value="-12.0">(GMT -12:00) Eniwetok, Kwajalein</option>
+                                                                <option value="-11.0">(GMT -11:00) Midway Island, Samoa</option>
+                                                                <option value="-10.0">(GMT -10:00) Hawaii</option>
+                                                                <option value="-9.0">(GMT -9:00) Alaska</option>
+                                                                <option value="-8.0">(GMT -8:00) Pacific Time (US &amp; Canada)</option>
+                                                                <option value="-7.0">(GMT -7:00) Mountain Time (US &amp; Canada)</option>
+                                                                <option value="-6.0">(GMT -6:00) Central Time (US &amp; Canada), Mexico City</option>
+                                                                <option value="-5.0">(GMT -5:00) Eastern Time (US &amp; Canada), Bogota, Lima</option>
+                                                                <option value="-4.0">(GMT -4:00) Atlantic Time (Canada), Caracas, La Paz</option>
+                                                                <option value="-3.5">(GMT -3:30) Newfoundland</option>
+                                                                <option value="-3.0">(GMT -3:00) Brazil, Buenos Aires, Georgetown</option>
+                                                                <option value="-2.0">(GMT -2:00) Mid-Atlantic</option>
+                                                                <option value="-1.0">(GMT -1:00 hour) Azores, Cape Verde Islands</option>
+                                                                <option value="0.0">(GMT) Western Europe Time, London, Lisbon, Casablanca</option>
+                                                                <option value="1.0">(GMT +1:00 hour) Brussels, Copenhagen, Madrid, Paris</option>
+                                                                <option value="2.0">(GMT +2:00) Kaliningrad, South Africa</option>
+                                                                <option value="3.0">(GMT +3:00) Baghdad, Riyadh, Moscow, St. Petersburg</option>
+                                                                <option value="3.5">(GMT +3:30) Tehran</option>
+                                                                <option value="4.0">(GMT +4:00) Abu Dhabi, Muscat, Baku, Tbilisi</option>
+                                                                <option value="4.5">(GMT +4:30) Kabul</option>
+                                                                <option value="5.0">(GMT +5:00) Ekaterinburg, Islamabad, Karachi, Tashkent</option>
+                                                                <option value="5.5">(GMT +5:30) Bombay, Calcutta, Madras, New Delhi</option>
+                                                                <option value="5.75">(GMT +5:45) Kathmandu</option>
+                                                                <option value="6.0">(GMT +6:00) Almaty, Dhaka, Colombo</option>
+                                                                <option value="7.0">(GMT +7:00) Bangkok, Hanoi, Jakarta</option>
+                                                                <option value="8.0">(GMT +8:00) Beijing, Perth, Singapore, Hong Kong</option>
+                                                                <option value="9.0">(GMT +9:00) Tokyo, Seoul, Osaka, Sapporo, Yakutsk</option>
+                                                                <option value="9.5">(GMT +9:30) Adelaide, Darwin</option>
+                                                                <option value="10.0">(GMT +10:00) Eastern Australia, Guam, Vladivostok</option>
+                                                                <option value="11.0">(GMT +11:00) Magadan, Solomon Islands, New Caledonia</option>
+                                                                <option value="12.0">(GMT +12:00) Auckland, Wellington, Fiji, Kamchatka</option>
+                                                            </select></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">System Time</th>
+                                                        <td><input type="time" name="time" /></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="tab-pane fade" id="pills-admin" role="tabpanel" aria-labelledby="pills-admin-tab">admin</div>
+                                        <div class="tab-pane fade" id="pills-sysnote" role="tabpanel" aria-labelledby="pills-sysnote-tab">...</div>
+                                        <div class="tab-pane fade" id="pills-ai" role="tabpanel" aria-labelledby="pills-ai-tab">ai</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1">© 2018 SCC Management System</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">SCC Website </a></li>|
+                <li class="list-inline-item"><a href="#">Contact </a></li>|
+                <li class="list-inline-item"><a href="#">About </a></li>
+            </ul>
+        </footer>
+    </div><!--end of container-->		
+</body>
+</html>
