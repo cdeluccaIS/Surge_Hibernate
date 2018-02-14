@@ -69,7 +69,7 @@
                                     </li>
                                     <li class="nav-item">    
                                         <div class="pt-3">
-                                            <a class="btn btn-primary btn-lg btn-block" href="admin_security_settings.html">Security Settings</a>
+                                            <a class="btn btn-primary btn-lg btn-block active" href="admin_security_settings.html">Security Settings</a>
                                         </div>
                                     </li>
                                     <li class="nav-item">    
@@ -127,12 +127,36 @@
                                                 </tbody>
                                             </table>
                                         </div>
-                                        
                                         <div class="tab-pane fade" id="pills-ssl" role="tabpanel" aria-labelledby="pills-ssl-tab">
-
-                                           
+                                            <h5 style="padding-top:10px; padding-bottom:10px; padding-left:10px;">SSL</h5>
+                                            <div class="row" style="padding-top:10px; padding-bottom:10px; padding-left:10px;">
+                                                <div class="col-6 col-sm-4">
+                                                  SSL Keystone:
+                                                  <br>
+                                                  <button type="button" class="btn btn-secondary btn-sm">Import Keystone</button>
+                                                </div>
+                                                <div class="col-6 col-sm-4">
+                                                  <br>
+                                                  <button type="button" class="btn btn-secondary btn-sm">Export Keystone</button>
+                                                </div>
+                                                <div class="col-6 col-sm-4">
+                                                    Unknown:
+                                                  <br>
+                                                  <button type="button" class="btn btn-secondary btn-sm">Reset Keystone</button>
+                                                </div>
+                                              </div>
+                                            
+                                            <h5 style="padding-top:10px; padding-bottom:10px; padding-left:10px;">Transport Key Pair</h5>
+                                            <div class="col-sm-15" style="padding-top:10px; padding-bottom:10px; padding-left:10px;">
+                                                RSA Private Key (base 64 encoded PKCS#8 private key)
+                                              <textarea rows="4" cols="50"></textarea>
+                                            </div>
+                                           <div class="col-sm-15" style="padding-top:10px; padding-bottom:10px; padding-left:10px;">
+                                                RSA Private Key (base 64 encoded PKCS#8 private key)
+                                              <textarea rows="4" cols="50"></textarea>
+                                            </div>
+                                            
                                         </div>
-                                        
                                         <div class="tab-pane fade" id="pills-extcle" role="tabpanel" aria-labelledby="pills-extcle-tab">
                                            
                                             

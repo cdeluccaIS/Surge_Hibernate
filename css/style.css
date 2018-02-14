@@ -241,6 +241,11 @@ p{
     border-color: #E7B539;
 }
 
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #D2A024;
+    border-color: #E7B539;
+}
 /*CSS Bootstrap overwrited On Button Click*/
 .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
     color: #fff;
