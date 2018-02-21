@@ -59,53 +59,41 @@
             </div>
             <div id="content">
                 <!--content wrapper-->
+                <div id="contentWrapper">
                     <div class="container" style="padding-top:75px;">
                         <div class="row">
-                            <div class="col-md-2 order-md-1">
-                            <a href="#"><h3 class="text-primary">Selected:
-                                </h3>
-                            </a>
-                                <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                                    <a class="btn btn-primary btn-sm btn-block" href="admin_add_user.html" data-toggle="tooltip" data-placement="right" data-html="true" 
-                                       title="Lock User">
-                                    Lock</a>
+                            <div class="col-md-4 order-md-1 mb-4">
+                                <ul class="nav nav-pills nav-justified flex-column">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="add-new-user-button" href="admin_add_user.html">Create New User</a>
+                                    </li>
+                                </ul>
+                                <div class="my-3 p-3 rounded box-shadow">
+                                    <ul class="nav nav-pills nav-justified flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#">Modify User</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Suspend User</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Delete User</a>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                                    <a class="btn btn-danger btn-sm btn-block" href="admin_add_user.html" data-toggle="tooltip" data-placement="right" data-html="true" 
-                                       title="Delete User">Delete</a>
-                                </div>
-                                
                             </div>
-                            <div class="col-md-8 order-md-2">
-                                <a href="#"><h3 class="text-primary">User Management?
-                                </h3>
-                            </a>
-                                <div class="row border">
-                                    <div class="col-md-2 order-md-1 border">
-                                        <input type="checkbox" />
-                                    </div>
-                                    <div class="col-md-8 order-md-2 border">
-                                        <h3 class="text-center"> User Name</h3>
-                                    </div>
-                                    <div class="col-md-2 order-md-3 border">
-                                       <h3 class="text-center">Status</h3>
-                                    </div>
-                                </div>
-                                
-                                 <div class="row border">
-                                    <div class="col-md-2 order-md-1 border">
-                                        <input type="checkbox" checked />
-                                    </div>
-                                    <div class="col-md-8 order-md-2 border">
-                                        <h3 class="text-center"> James2131</h3>
-                                    </div>
-                                    <div class="col-md-2 order-md-3 border">
-                                       <h3 class="text-center">Status Icon</h3>
-                                    </div>
-                                </div>
-                                <div class="row border">
-                                    <div class="col-md-2 order-md-1 border">
-                                        
+                            <div class="col-md-8 order-md-2 border">
+                                <h2 class="mb-3" style="text-align: center;">User Management</h2>
+                                <div class="row">
+                                    <div class="col-md-4 order-md-1 mb-4">
+                                        <ul class="nav nav-pills nav-justified flex-column">
+                                            <li class="nav-item">
+                                                <a class="nav-link active border" href="#">Management Users</a>
+                                            </li>
+                                            <li class="nav-item border">
+                                                <a class="nav-link" href="#">Pending Users</a>
+                                            </li>
+                                        </ul>
                                     </div>
                                     <div class="col-md-8 order-md-2 border">
                                         <h2 class="mb-3" style="text-align: center;">Tim1184</h2>
@@ -135,52 +123,35 @@
                                                 <td><a href="#">Active</a></td>
                                             </tr>
                                         </table>
-                                    </div>
-                                    <div class="col-md-2 order-md-3 border">
-                                        
-                                    </div>
-                                </div>
-                                
-                                <div class="row border">
-                                   
+                                        <hr class="mb-4">
                                         <table class="table table-striped">
                                             <tr>
-                                                <td><input class="" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."></td>
                                                 <td style="text-align: center;">Diana0684</td>
+                                                <td><input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."></td>
                                             </tr>
                                             <tr>
-                                                <td><input class="" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."></td>
                                                 <td style="text-align: center;">Jim1982</td>
+                                                <td><input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."></td>
+                                           
                                             </tr>
                                             <tr>
-                                                 <td><input class="" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."></td>
                                                 <td style="text-align: center;">Shawn2922</td>
+                                                <td><input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."></td>
+                                           
                                             </tr>
                                             <tr>
-                                                <td><input class="" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."></td>
                                                 <td style="text-align: center;">Roger2123</td>
+                                                <td><input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."></td>
+                                           
                                             </tr>
                                         </table>
+                                    </div>
                                 </div>
-                                
-                                
-                            </div>
-                            
-                            <div class="col-md-2 order-md-3">
-                                <h3 class="text-center"> Other Status Indicators</h3>
-<!--                                <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                                    <a class="btn btn-primary btn-sm btn-block" href="admin_add_user.html" data-toggle="tooltip" data-placement="right" data-html="true" 
-                                       title="Lock User">
-                                    Lock</a>
-                                </div>
-                                <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                                    <a class="btn btn-danger btn-sm btn-block" href="admin_add_user.html" data-toggle="tooltip" data-placement="right" data-html="true" 
-                                       title="Delete User">Delete</a>
-                                </div>-->
-                                
                             </div>
                         </div>
                     </div>
+
+                </div>
             </div>
             <footer class="my-5 pt-5 text-muted text-center text-small">
                 <p class="mb-1">© 2018 SCC Management System</p>
