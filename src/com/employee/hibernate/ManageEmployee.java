@@ -7,6 +7,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
 
 
 public class ManageEmployee {
@@ -23,17 +24,21 @@ public class ManageEmployee {
         ManageEmployee ME = new ManageEmployee();
 
         /* Add few employee records in database */
-        Integer empID1 = ME.addEmployee("Zara", "Ali", 1000);
+        /*Integer empID1 = ME.addEmployee("Zara", "Ali", 1000);
         Integer empID2 = ME.addEmployee("Daisy", "Das", 5000);
         Integer empID3 = ME.addEmployee("John", "Paul", 10000);
+        */
 
         /* Delete an employee from the database */
-        ME.deleteEmployee(empID2);
+        /*ME.deleteEmployee(empID2);
         ME.deleteEmployee(empID1);
         ME.deleteEmployee(empID3);
+        */
         
         /* List down all the employees */
-        ME.listEmployees();
+        //ME.listEmployees();
+        ME.checkEmployee("Zara", "Ali");
+        //ME.checkEmployee("Jon", "Doe");
 
         /* Update employee's records */
         //ME.updateEmployee(empID1, 5000);
@@ -42,6 +47,32 @@ public class ManageEmployee {
         //ME.listEmployees();
     }
 
+    /* Method to Check the database for an employee */
+    public void checkEmployee(String fname, String lname) {
+    		Session session = factory.openSession();
+    		Transaction tx = null;
+    		
+    		try {
+    			tx = session.beginTransaction();
+    			Query inData = session.createQuery("From Employee where last_name LIKE :last_name AND first_name LIKE :first_name");
+    			inData.setParameter("last_name", lname);
+    			inData.setParameter("first_name", fname);
+    			List employees = inData.list();
+    			for (Iterator iterator = employees.iterator(); iterator.hasNext();){
+                    Employee employee = (Employee) iterator.next();
+                    System.out.print("First Name: " + employee.getFirstName());
+                    System.out.print("  Last Name: " + employee.getLastName());
+                    System.out.println("  Salary: " + employee.getSalary());
+                    System.out.println("  ID: " + employee.getId());
+                }
+    		} catch (HibernateException e) {
+    			if (tx!=null) tx.rollback();
+    			e.printStackTrace();
+    		} finally {
+    			session.close();
+    		}
+    }
+    
     /* Method to CREATE an employee in the database */
     public Integer addEmployee(String fname, String lname, int salary){
         Session session = factory.openSession();
