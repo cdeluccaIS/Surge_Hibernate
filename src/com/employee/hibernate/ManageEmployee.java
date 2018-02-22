@@ -9,6 +9,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
 
+import com.mchange.v1.util.CollectionUtils;
+
 
 public class ManageEmployee {
     private static SessionFactory factory;
@@ -37,8 +39,8 @@ public class ManageEmployee {
         
         /* List down all the employees */
         //ME.listEmployees();
-        ME.checkEmployee("Zara", "Ali");
-        //ME.checkEmployee("Jon", "Doe");
+        //ME.checkEmployee("Zara", "Ali");
+        ME.existsEmployee("John", "Ali");
 
         /* Update employee's records */
         //ME.updateEmployee(empID1, 5000);
@@ -47,7 +49,7 @@ public class ManageEmployee {
         //ME.listEmployees();
     }
 
-    /* Method to Check the database for an employee */
+    /* Method to Check the database for an employee and print their info */
     public void checkEmployee(String fname, String lname) {
     		Session session = factory.openSession();
     		Transaction tx = null;
@@ -71,6 +73,33 @@ public class ManageEmployee {
     		} finally {
     			session.close();
     		}
+    }
+    
+    /* Method to check if an employee exists and returns boolean */
+    public boolean existsEmployee(String fname, String lname) {
+    		Session session = factory.openSession();
+    		Transaction tx = null;
+    		
+    		try {
+    			tx = session.beginTransaction();
+    			Query exists = session.createQuery("From Employee where last_name LIKE :last_name AND first_name LIKE :first_name");
+    			exists.setParameter("last_name", lname);
+    			exists.setParameter("first_name", fname);
+    			List employees = exists.list();
+    			if (employees != null && employees.isEmpty()) {
+    				System.out.println("False");
+        			return false;
+        		} else {
+        			System.out.println("True");
+        			return true;
+        		}
+    		} catch (HibernateException e) {
+    			if (tx!=null) tx.rollback();
+    			e.printStackTrace();
+    		} finally {
+    			session.close();
+    		}
+    		return existsEmployee(fname, lname);
     }
     
     /* Method to CREATE an employee in the database */
