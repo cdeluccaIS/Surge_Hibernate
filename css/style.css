@@ -289,3 +289,11 @@ p{
     color: black;
  }
  
+.scc-backgound{
+     background-color: #E7B539;
+     border-color: #E7B539;
+}
+ 
+.scc-border{
+     border-color: #E7B539;
+}
