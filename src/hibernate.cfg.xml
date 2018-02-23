@@ -4,41 +4,23 @@
 <hibernate-configuration>
     <session-factory>
 
-        <property name = "hibernate.dialect">
-            org.hibernate.dialect.PostgreSQL9Dialect
-        </property>
+        <property name = "hibernate.dialect">                   org.hibernate.dialect.PostgreSQL9Dialect        </property>
 
-        <property name = "hibernate.connection.driver_class">
-            org.postgresql.Driver
-        </property>
+        <property name = "hibernate.connection.driver_class">   org.postgresql.Driver                           </property>
 
-        <property name = "hibernate.connection.url">
-            jdbc:postgresql://localhost/scc_surge
-        </property>
+        <property name = "hibernate.connection.url">            jdbc:postgresql://localhost/scc_surge           </property>
 
-        <property name = "hibernate.connection.username">
-            theowner
-        </property>
+        <property name = "hibernate.connection.username">       theowner                                        </property>
 
-        <property name = "hibernate.connection.password">
-            test_pass
-        </property>
+        <property name = "hibernate.connection.password">       test_pass                                       </property>
         
-        <property name = "hibernate.c3p0.min_size">
-            1
-        </property>
+        <property name = "hibernate.c3p0.min_size">             1                                               </property>
         
-        <property name = "hibernate.c3p0.max_size">
-            20
-        </property>
+        <property name = "hibernate.c3p0.max_size">             20                                              </property>
         
-        <property name = "hibernate.c3p0.timeout">
-            1800
-        </property>
+        <property name = "hibernate.c3p0.timeout">              1800                                            </property>
         
-        <property name = "hibernate.c3p0.max_statements">
-            50
-        </property>
+        <property name = "hibernate.c3p0.max_statements">       50                                              </property>
 
         <!-- List of XML mapping files -->
         <mapping resource = "tutorial_employee.hbm.xml"/>
