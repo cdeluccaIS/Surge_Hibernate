@@ -107,10 +107,10 @@ public class ManageEmployee {
     			exists.setParameter("first_name", fname);
     			List employees = exists.list();
     			if (employees != null && employees.isEmpty()) {
-    				System.out.println("False");
+    				//System.out.println("False");
         			return false;
         		} else {
-        			System.out.println("True");
+        			//System.out.println("True");
         			return true;
         		}
     		} catch (HibernateException e) {
