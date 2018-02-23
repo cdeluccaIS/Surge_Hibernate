@@ -6,9 +6,7 @@
         <title>SCC Admin General Settings</title>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote.css" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="css/style.css" />
     </head>
@@ -67,7 +65,7 @@
                             <div class="col-md-4 order-md-1 mb-4">
                                 <ul class="nav nav-pills nav-justified flex-column">
                                     <li class="nav-item">
-                                        <a class="btn btn-primary btn-lg btn-block" href="admin_gen_settings.html">Application Settings</a>
+                                        <a class="btn btn-primary btn-lg btn-block active" href="admin_gen_settings.html">Application Settings</a>
                                     </li>
                                     <li class="nav-item">    
                                         <div class="pt-3">
@@ -152,52 +150,29 @@
 
                                             <table class="table">
                                                 <tbody>
-                                                     <tr>
-                                                        <th scope="row">First Name</th>
-                                                        <td><input type="text" name="first_name" placeholder="David"/></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Last Name</th>
-                                                        <td><input type="text" name="last_name" placeholder="David"/></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">Agency</th>
-                                                        <td><input type="text" name="agency" placeholder="DIA"/></td>
-                                                    </tr>
                                                     <tr>
                                                         <th scope="row">Support Email</th>
-                                                        <td><input type="text" name="support_email" placeholder="admin@scc.com"/></td>
+                                                        <td>admin@scc.com</td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">Secure Phone Number</th>
-                                                        <td><input type="text" name="secure_phone" placeholder="555-555-5555"/></td>
+                                                        <td>555-555-5555</td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">Unsecure Phone Number</th>
-                                                        <td><input type="text" name="unsecure_phone" placeholder="444-555-5555"/></td>
+                                                        <td>444-555-5555</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                         <div class="tab-pane fade" id="pills-sysnote" role="tabpanel" aria-labelledby="pills-sysnote-tab">
                                             <h5 style="padding-top:10px; padding-bottom:10px; padding-left:10px;">Notification Settings</h5>
-                                            <div class="row col-md-12">
-                                            <div  class="col-md-3 left">
-                                            <button type="button" class="btn btn-primary btn-block ">Login-new user</button><br/>
-                                            <button type="button" class="btn btn-primary btn-block ">Login-account pending</button>
-                                            </div>
-                                            <form class="right col-md-9" >
+
+                                            <form style="padding-left:10px;">
                                                 <div class="form-group row">
-                                                    
-                                                        <div id="summernote"></div>
-                                                            <script>
-                                                              $('#summernote').summernote({
-                                                                placeholder: 'Insert Text',
-                                                                tabsize: 2,
-                                                                height: 100
-                                                              });
-                                                            </script>
-                                                    
+                                                    <div class="col-sm-10">
+                                                        <textarea rows="4" cols="50"></textarea>
+                                                    </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <div class="col-sm-10">
@@ -206,7 +181,6 @@
                                                     </div>
                                                 </div>
                                             </form>
-                                            </div>
                                         </div>
                                         <div class="tab-pane fade" id="pills-ai" role="tabpanel" aria-labelledby="pills-ai-tab">
                                             <h5 style="padding-top:10px; padding-bottom:10px; padding-left:10px;">Application Information</h5>
@@ -215,23 +189,19 @@
                                                     <tr>
                                                         <th scope="row">Version : </th>
                                                         <td>1.123</td>
-                                                        <th scope="row">Release date : </th>
-                                                        <td>2018-01-01</td>
                                                     </tr>
                                                     <tr>
-                                                        <th scope="row">JVM Version : </th>
+                                                        <th scope="row">Builder Number : </th>
                                                         <td>123.456.789</td>
-                                                        <th scope="row">Installation Prerequisite : </th>
-                                                        <td>xx.xx</td>
                                                     </tr>
                                                     <tr>
-                                                        <th scope="row">Platform : </th>
-                                                        <td>CentOS Linux</td>
+                                                        <th scope="row">Release Date : </th>
+                                                        <td>07/27/2018</td>
                                                     </tr>
 
                                                     <tr>
-                                                        <th scope="row">License : </th>
-                                                        <td>Open Source</td>
+                                                        <th scope="row">Deployed Operating System : </th>
+                                                        <td>CentOS Linux</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
