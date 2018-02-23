@@ -10,6 +10,7 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
 
 import com.mchange.v1.util.CollectionUtils;
+import java.util.Scanner;
 
 
 public class ManageEmployee {
@@ -40,7 +41,26 @@ public class ManageEmployee {
         /* List down all the employees */
         //ME.listEmployees();
         //ME.checkEmployee("Zara", "Ali");
-        ME.existsEmployee("John", "Ali");
+        
+        /* Function to search for an employee and returns either the found employee information or 
+         * prints the name of the employee it couldn't find */
+       // String fname = "Zara";
+       // String lname = "Paul";
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a first name:\t");
+        String fname = scanner.nextLine();
+
+        System.out.print("Enter a last name:\t");
+        String lname = scanner.nextLine();
+        
+        if (ME.existsEmployee(fname, lname)) {
+        		System.out.println("Found " + fname + " " + lname + ".");
+        		ME.checkEmployee(fname, lname);
+        } else {
+        		System.out.println("Couldn't find " + fname + " " + lname + ".");
+        }
+        scanner.close();
 
         /* Update employee's records */
         //ME.updateEmployee(empID1, 5000);
