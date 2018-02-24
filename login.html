@@ -3,11 +3,14 @@
     <head>
         <!--scc main header-->
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>SCC</title>
-        <script src="js/jquery.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+        <title>LOGIN | SCC</title>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="js/custom.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="css/style.css" />
+    
     </head>
     <body>
         <div id="container">
@@ -27,29 +30,50 @@
                             <li><a href="#">Support</a></li>
                         </ul>
                     </div>
-                    
+                    <div id="sccSecondNav">
+                        <ul>
+                            <li><a href="#" >User: TestUsername</a></li>
+                            <li><a href="#" >Log Off</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <!--content wrapper-->
                 <div class="container" style="padding-top:25px;">
                 <div class="row">
-                <div class="col-md-4">
+                    <div class="col-md-6" style="padding-top:40px;">
                     <form class="form-signin" action="admin_home_page.html">
-   			      <div class="form-label-group">
-   			      <label  class="text-primary" style="padding-top: 10px;">USERNAME</label>
-			        <input type="text" id="username" class="form-control" placeholder="Username" required autofocus>
+   			      <div class="form-group row">
+                                  <label  class="col-sm-2 col-form-label"><h3>Username</h3></label>
+                              <div class="col-sm-10">
+			      <input type="text" id="username" class="form-control" placeholder="Username" required autofocus>
+                              </div>
 			      </div>
-                              <div class="form-label-group">
-			      <label class="text-primary" style="padding-top: 10px;">PASSWORD</label>
+                              <div class="form-group row">
+                                  <label class="col-sm-2 col-form-label"><h3>Password</h3></label>
+                              <div class="col-sm-10">
 			        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                              </div>
 			      </div>
-					<label class="text-primary" style="padding-top: 10px;">
-			           Forgot Password?
-			        </label>
-			      <button class="btn btn-lg btn-primary btn-block" type="submit">LOGIN <span class="glyphicon glyphicon-lock"></span></button>
-			      </form>
-			      </div>
-			      <div class="col-md-7">
+				
+                            <div class="btn-group col-md-6" style="padding:10px;">
+                                <span class="col-md-12">
+                                 <button class="btn btn-sm btn-success btn-block" type="submit">LOGIN <span class="glyphicon glyphicon-lock"></span></button>
+                                 <label class="text-primary" style="padding-top: 10px; padding-left:40px;">Forgot My Password
+			        </label>  
+                                </span>
+			      
+			        
+                                <span class="col-md-12">
+                                <button class="btn btn-sm btn-info btn-block" data-placement="right" data-html="true" 
+                                   title="Delete User" data-toggle="modal" data-target="#deleteModalCenter">Register <span class="glyphicon glyphicon-lock"></span></button>
+                                
+                                <label class="text-primary" style="padding-top: 10px;">  </label>  
+                                </span>
+                            </div>  
+                    </form>
+		</div>
+			      <div class="col-md-6">
 			      <h2 class="text-primary">SCC Notice</h2>
 			      <div class="border border-dark">
 			      <p style="padding:10px;">Lorem ipsum dolor sit amet, qui id elitr diceret, vim ne partiendo consulatu deterruisset. Te ferri everti oportere est. Sea cu laudem ubique neglegentur. Doctus tibique convenire ad his, usu et quas tempor. Altera appareat verterem in vix, te eam tantas altera, nibh insolens id nam. Id ignota salutatus eum, te nullam patrioque ius, eu per quod debitis philosophia.</p>
@@ -66,6 +90,26 @@
                     <li class="list-inline-item"><a href="#">About </a></li>
                 </ul>
             </footer>
-        </div><!--end of footer-->		
+        </div><!--end of footer-->
+        <!--modal delete user-->
+        <div class="modal fade" id="deleteModalCenter" tabindex="-1" role="dialog" aria-labelledby="deleteModalCenter" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content scc-border">
+                    <div class="modal-header scc-backgound">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Successful</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Registration Successful
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+                        <a href="admin_add_user.html"><button type="button" class="btn btn-primary btn-sm">Register</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
