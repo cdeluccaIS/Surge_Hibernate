@@ -8,6 +8,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="js/custom.js"></script>
+        <script src="js/validateLogin.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="css/style.css" />
     
@@ -66,7 +67,7 @@
 			        
                                 <span class="col-md-12">
                                 <button class="btn btn-sm btn-info btn-block" data-placement="right" data-html="true" 
-                                   title="Delete User" data-toggle="modal" data-target="#deleteModalCenter">Register <span class="glyphicon glyphicon-lock"></span></button>
+                                   title="Register User" data-toggle="modal" data-target="#registerModalCenter">REGISTER <span class="glyphicon glyphicon-lock"></span></button>
                                 
                                 <label class="text-primary" style="padding-top: 10px;">  </label>  
                                 </span>
@@ -91,8 +92,8 @@
                 </ul>
             </footer>
         </div><!--end of footer-->
-        <!--modal delete user-->
-        <div class="modal fade" id="deleteModalCenter" tabindex="-1" role="dialog" aria-labelledby="deleteModalCenter" aria-hidden="true">
+        <!--modal Register user-->
+        <div class="modal fade" id="registerModalCenter" tabindex="-1" role="dialog" aria-labelledby="registerModalCenter" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content scc-border">
                     <div class="modal-header scc-backgound">
@@ -107,6 +108,26 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
                         <a href="admin_add_user.html"><button type="button" class="btn btn-primary btn-sm">Register</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--modal check input -->
+        <div class="modal fade" id="validateLogin" tabindex="-1" role="dialog" aria-labelledby="validateLogin" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content scc-border">
+                    <div class="modal-header scc-backgound">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Error!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Username and/or Password cannot be left blank.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">OK</button>
+                    
                     </div>
                 </div>
             </div>
