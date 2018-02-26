@@ -1,22 +1,32 @@
 /* 
  */
-$(function () {
+$(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
-})
-        (function () {
-            'use strict';
-            window.addEventListener('load', function () {
-                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                var forms = document.getElementsByClassName('needs-validation');
-                // Loop over them and prevent submission
-                var validation = Array.prototype.filter.call(forms, function (form) {
-                    form.addEventListener('submit', function (event) {
-                        if (form.checkValidity() === false) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                        }
-                        form.classList.add('was-validated');
-                    }, false);
-                });
-            }, false);
-        })();
+    //load function
+    suspendUser();
+});
+
+function suspendUser() {
+    
+    //on modal load 
+    $("#suspendModalCenter").on("show.bs.modal", function(e) {
+        $('#selectedUsers').empty();
+        /* look for all checkboes */
+        $(".usercheck:checked").each(function () {
+            $('#selectedUsers').append('<li value='+$(this).val()+'>'+$(this).val()+'</li>');
+        });
+    });
+    //on submit check value
+    $("#suspendUser").submit(function (event) {
+        event.preventDefault();
+        //check value of explination
+        var just = $('#justification').val();
+        if (just.length <= 0) {
+            $("#validateJustification").modal();
+        }
+        else {
+            //Do Submit
+        }
+    });
+}
+    
