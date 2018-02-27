@@ -229,7 +229,48 @@ p{
     background-color: #E7B539;
 }
 
-.btn-primary {
+.btn-sccgold {
+    color: #fff;
+    background-color: #E7B539;
+    border-color: #ffc107;
+}
+
+.btn-sccgold:hover {
+    color: #fff;
+}
+
+/*when clicked*/
+.btn-sccgold:not(:disabled):not(.disabled).active, .btn-sccgold:not(:disabled):not(.disabled):active, .show > .btn-sccgold.dropdown-toggle {
+    color: #fff;
+}
+
+.btn-sccblue {
+    color: #fff;
+    background-color: #337AB7;
+    border-color: #337AB7;
+}
+
+.btn-sccgray {
+    color: #333333;
+    background-color: #CECECE;
+    border-color: #CECECE;
+}
+/*
+.btn-sccgray:hover {
+    color: #fff;
+}
+
+when clicked
+.btn-sccgray:not(:disabled):not(.disabled).active, .btn-sccgold:not(:disabled):not(.disabled):active, .show > .btn-sccgold.dropdown-toggle {
+    color: #fff;
+}*/
+
+
+CECECE
+
+
+
+/*.btn-primary {
     color: #fff;
     background-color: #E7B539;
     border-color: #E7B539;
@@ -246,8 +287,31 @@ p{
     background-color: #D2A024;
     border-color: #E7B539;
 }
-/*CSS Bootstrap overwrited On Button Click*/
+//CSS Bootstrap overwrited On Button Click
 .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #D2A024;
+    border-color: #E7B539;
+}
+
+.btn-bluescc:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+.btn-bluescc {
+    color: #fff;
+    background-color: #337AB7;
+    border-color: #337AB7;
+}
+
+.btn-bluescc:not(:disabled):not(.disabled).active, .btn-bluescc:not(:disabled):not(.disabled):active, .show > .btn-bluescc.dropdown-toggle {
+    color: #fff;
+    background-color: #D2A024;
+    border-color: #E7B539;
+}
+.btn-bluescc:not(:disabled):not(.disabled):active, .show > .btn-bluescc.dropdown-toggle {
     color: #fff;
     background-color: #D2A024;
     border-color: #E7B539;
@@ -257,7 +321,7 @@ p{
     color: #fff;
     background-color: #D2A024;
     border-color: #E7B539;
-}
+}*/
 /*############################################*/
 .my-3{
     background-color: #CECECE;
