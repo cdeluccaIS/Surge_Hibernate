@@ -9,7 +9,6 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
 
-import com.mchange.v1.util.CollectionUtils;
 import java.util.Scanner;
 
 
