@@ -100,7 +100,7 @@
 
                             <div class="row border">
                                 <div class="col-md-2 order-md-1 border">
-                                     <input class="usercheck" type="checkbox" id="blankCheckbox" value="James2131" aria-label="...">
+                                    <input class="usercheck" type="checkbox" id="blankCheckbox" value="James2131" aria-label="...">
                                 </div>
                                 <div class="col-md-8 order-md-2 border">
                                     <h3 class="text-center"> James2131</h3>
@@ -111,7 +111,7 @@
                             </div>
                             <div class="row border">
                                 <div class="col-md-2 order-md-1 border">
-                                     <!--<input type="checkbox"  />-->
+                                    <!--<input type="checkbox"  />-->
                                 </div>
                                 <div class="col-md-8 order-md-2 border">
                                     <div class="row">
@@ -222,16 +222,17 @@
                                                 </div>
                                             </div>
                                             <!--<button class="btn btn-primary " data-toggle="modal" data-target="#dangerModalCenter" type="submit">Save</button>-->
-                                             <a class="btn btn-primary" href="#" data-placement="right" data-html="true" 
-                                                title="Save Users">Save</a>
-                                            
+                                            <a class="btn btn-primary" href="#" data-placement="right" data-html="true" 
+                                               title="Save Users">Save</a>
+
                                             <button type="button" class="btn btn-secondary">Cancel</button>
                                             </form>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-2 order-md-3 border">
-
+                                    <img src="images/icons/active-icon.png">
+                                    <img src="images/icons/admin-icon.png">
                                 </div>
                             </div>
                             <div class="row border">
@@ -261,7 +262,78 @@
                             </div>
                         </div>
                         <div class="col-md-2 order-md-3">
-                            <h3 class="text-center"> Other Status Indicators</h3>
+                            <h3> Other Status Indicators</h3>
+                            <!--                            <div class="row">
+                                                                <img src="images/icons/active-icon.png">
+                                                                <span class="text-center">Active</span>
+                                                        </div>
+                                                        
+                                                       <div class="row">
+                                                                <img src="images/icons/active-icon.png">
+                                                                <span class="text-center"> User Active</span>
+                                                        </div>
+                                                        <div class="row">
+                                                                <img src="images/icons/not-active-icon.png">
+                                                                <span class="text-center"> User Not Active</span>
+                                                        </div>
+                                                        <div class="row">
+                                                                <img src="images/icons/pending-icon.png">
+                                                                <span class="text-center">User Pending</span>
+                                                        </div>
+                                                        <div class="row">
+                                                                <img src="images/icons/user-icon.png">
+                                                                <span class="text-center">User</span>
+                                                        </div>
+                                                        <div class="row">
+                                                                <img src="images/icons/admin-icon.png">
+                                                                <span class="text-center">Admin</span>
+                                                        </div>-->
+
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img src="images/icons/active-icon.png">
+                                        <span class="text-center">Active</span>
+
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="images/icons/not-active-icon.png">
+                                        <span class="text-center">Not Active</span>
+
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="images/icons/pending-icon.png">
+                                        <span class="text-center">Pending</span>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <img src="images/icons/user-icon.png">
+                                        <span class="text-center">User</span>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <img src="images/icons/admin-icon.png">
+                                        <span class="text-center">Admin</span>
+
+                                    </td>
+
+                                </tr>
+                            </table>
+
                         </div>
                     </div>
                 </div>
@@ -277,139 +349,139 @@
         </div><!--end of container-->
         <!--modal delete user-->
         <div class="modal fade" id="deleteModalCenter" tabindex="-1" role="dialog" aria-labelledby="deleteModalCenter" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content scc-border-default">
-              <div class="modal-header scc-backgound-default">
-                <h5 class="modal-title" id="ModalLongTitle">Confirm Action on Selected User(s)</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                Are you sure you want to delete user(s)?
-                <ul id="selectedUsersForDelete">
-                </ul>
-                
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-primary btn-sm">Confirm</button>
-              </div>
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content scc-border-default">
+                    <div class="modal-header scc-backgound-default">
+                        <h5 class="modal-title" id="ModalLongTitle">Confirm Action on Selected User(s)</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Are you sure you want to delete user(s)?
+                        <ul id="selectedUsersForDelete">
+                        </ul>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary btn-sm">Confirm</button>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-        
+
         <div class="modal fade" id="dangerModalCenter" tabindex="-1" role="dialog" aria-labelledby="dangerModalCenter" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content scc-border-danger">
-              <div class="modal-header scc-backgound-danger">
-                <h5 class="modal-title" id="ModalLongTitle">Warning: One or more selected User(s) is already approved.</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                 The user(s) Diana684,Jim1983 are already approved and cannot be approved a second time.
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Continue</button>
-              </div>
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content scc-border-danger">
+                    <div class="modal-header scc-backgound-danger">
+                        <h5 class="modal-title" id="ModalLongTitle">Warning: One or more selected User(s) is already approved.</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        The user(s) Diana684,Jim1983 are already approved and cannot be approved a second time.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Continue</button>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
         <!--modal suspend user-->
         <div class="modal fade" id="suspendModalCenter" tabindex="-1" role="dialog" aria-labelledby="suspendModalCenter" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content scc-border-default">
-              <div class="modal-header scc-backgound-default">
-                <h5 class="modal-title" id="ModalLongTitle">Suspend the following user(s)</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-            <form action="#" name="suspendUser" id="suspendUser">
-              <div class="modal-body">
-                The following action will suspend the following user(s) to revoke access to the system. <br>
-                Do you wish to confirm this action for ? <br>
-                <ul id="selectedUsers">
-                </ul>
-               Please provide justification of suspension of selected user accounts in the text box below <b>(Required)</b> 
-               <textarea rows="3" cols="40" id="justification" name="justification"></textarea>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
-                <button type="submit" class="btn btn-primary btn-sm">Confirm</button>
-              </div>
-            </form>
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content scc-border-default">
+                    <div class="modal-header scc-backgound-default">
+                        <h5 class="modal-title" id="ModalLongTitle">Suspend the following user(s)</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form action="#" name="suspendUser" id="suspendUser">
+                        <div class="modal-body">
+                            The following action will suspend the following user(s) to revoke access to the system. <br>
+                            Do you wish to confirm this action for ? <br>
+                            <ul id="selectedUsers">
+                            </ul>
+                            Please provide justification of suspension of selected user accounts in the text box below <b>(Required)</b> 
+                            <textarea rows="3" cols="40" id="justification" name="justification"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm">Confirm</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-          </div>
         </div>
         <div class="modal fade" id="validateJustification" tabindex="-1" role="dialog" aria-labelledby="validateJustification" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content scc-border-danger">
-              <div class="modal-header scc-backgound-danger">
-                <h5 class="modal-title" id="ModalLongTitle">Cannot complete action.<br>NO ENTRIES RECORDED.</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                 Justification must be provided in order to continue the action to suspend the user. <br>
-                 Please provide those details before continue.
-                 
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Continue</button>
-              </div>
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content scc-border-danger">
+                    <div class="modal-header scc-backgound-danger">
+                        <h5 class="modal-title" id="ModalLongTitle">Cannot complete action.<br>NO ENTRIES RECORDED.</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Justification must be provided in order to continue the action to suspend the user. <br>
+                        Please provide those details before continue.
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Continue</button>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
         <!--modal suspend user-->
         <div class="modal fade" id="approveModalCenter" tabindex="-1" role="dialog" aria-labelledby="approveModalCenter" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content scc-border-default">
-              <div class="modal-header scc-backgound-default">
-                <h5 class="modal-title" id="ModalLongTitle">Approve Pending User(s)?</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-            <form action="#" name="approvedUser" id="approveUser">
-              <div class="modal-body">
-                The following action will approve the following user(s) to access the system. <br>
-                Do you wish to confirm this action for ? <br>
-                <ul id="selectedUsersForApproval">
-                </ul>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
-                <button type="submit" class="btn btn-primary btn-sm">Confirm</button>
-              </div>
-            </form>
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content scc-border-default">
+                    <div class="modal-header scc-backgound-default">
+                        <h5 class="modal-title" id="ModalLongTitle">Approve Pending User(s)?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form action="#" name="approvedUser" id="approveUser">
+                        <div class="modal-body">
+                            The following action will approve the following user(s) to access the system. <br>
+                            Do you wish to confirm this action for ? <br>
+                            <ul id="selectedUsersForApproval">
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm">Confirm</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-          </div>
         </div>
-        
+
         <div class="modal fade" id="isApproved" tabindex="-1" role="dialog" aria-labelledby="isApproved" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content scc-border-danger">
-              <div class="modal-header scc-backgound-danger">
-                <h5 class="modal-title" id="ModalLongTitle">Warning : <br>One or More Selected User(s) are Already Approved.</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                 One or more selected User(s) is already approved <br>
-                 and cannot be approved a second time.
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Continue</button>
-              </div>
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content scc-border-danger">
+                    <div class="modal-header scc-backgound-danger">
+                        <h5 class="modal-title" id="ModalLongTitle">Warning : <br>One or More Selected User(s) are Already Approved.</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        One or more selected User(s) is already approved <br>
+                        and cannot be approved a second time.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Continue</button>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-        
+
     </body>
 </html>
 
