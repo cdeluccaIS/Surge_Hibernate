@@ -1,21 +1,21 @@
 package com.employee.hibernate;
-
+import java.util.UUID;
 
 public class Account {
-	private String uuid;
+	private UUID uuid;
     private String firstName;
     private char middleInitial;
     private String lastName;
     private String Email;
     private String securePhone;
     private String uSecurePhone;
-    private String agency;
-    private String citizenship;
+    private UUID agency;
+    private UUID citizenship;
     private String clearance;
     private String Address_one;
     private String Address_two;
     private String City;
-    private String State;
+    private UUID State;
     private int ZipCode;
     private String accountType;
     private String accountStatus;
@@ -23,15 +23,15 @@ public class Account {
     private boolean lock;
     
     public Account() {}
-    public Account(String firstName, String lastName, String uuid) {
+    public Account(String firstName, String lastName, UUID uuid) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.uuid = uuid;
     }
-	public String getUuid() {
+	public UUID getUuid() {
 		return uuid;
 	}
-	public void setUuid(String uuid) {
+	public void setUuid(UUID uuid) {
 		this.uuid = uuid;
 	}
 	public String getFirstName() {
@@ -70,16 +70,16 @@ public class Account {
 	public void setuSecurePhone(String uSecurePhone) {
 		this.uSecurePhone = uSecurePhone;
 	}
-	public String getAgency() {
+	public UUID getAgency() {
 		return agency;
 	}
-	public void setAgency(String agency) {
+	public void setAgency(UUID agency) {
 		this.agency = agency;
 	}
-	public String getCitizenship() {
+	public UUID getCitizenship() {
 		return citizenship;
 	}
-	public void setCitizenship(String citizenship) {
+	public void setCitizenship(UUID citizenship) {
 		this.citizenship = citizenship;
 	}
 	public String getClearance() {
@@ -106,10 +106,10 @@ public class Account {
 	public void setCity(String city) {
 		City = city;
 	}
-	public String getState() {
+	public UUID getState() {
 		return State;
 	}
-	public void setState(String state) {
+	public void setState(UUID state) {
 		State = state;
 	}
 	public int getZipCode() {
