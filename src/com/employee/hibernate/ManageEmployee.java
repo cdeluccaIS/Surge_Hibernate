@@ -52,12 +52,14 @@ public class ManageEmployee {
         System.out.print("Enter a last name:\t");
         String lname = scanner.nextLine();
         
-        if (ME.existsEmployee(fname, lname)) {
-        		System.out.println("Found " + fname + " " + lname + ".");
-        		ME.checkEmployee(fname, lname);
-        } else {
-        		System.out.println("Couldn't find " + fname + " " + lname + ".");
-        }
+        ME.checkAccount(fname, lname);
+        
+        //if (ME.existsEmployee(fname, lname)) {
+        	//	System.out.println("Found " + fname + " " + lname + ".");
+        //		ME.checkAccount(fname, lname);
+        //} else {
+        	//	System.out.println("Couldn't find " + fname + " " + lname + ".");
+        //}
         scanner.close();
 
         /* Update employee's records */
@@ -85,6 +87,29 @@ public class ManageEmployee {
                     System.out.println("  Salary: " + employee.getSalary());
                     System.out.println("  ID: " + employee.getId());
                 }
+    		} catch (HibernateException e) {
+    			if (tx!=null) tx.rollback();
+    			e.printStackTrace();
+    		} finally {
+    			session.close();
+    		}
+    }
+    
+    /* Method to test Account table in db with any interaction */
+    public void checkAccount(String fname, String lname) {
+    		Session session = factory.openSession();
+    		Transaction tx = null;
+    		
+    		try {
+    			tx = session.beginTransaction();
+    			Query inData = session.createQuery("From Account where firstName LIKE :fname AND lastName LIKE :lname");
+    			inData.setParameter("fname", fname);
+    			inData.setParameter("lname", lname);
+    			List accounts = inData.list();
+    			for (Iterator iterator = accounts.iterator(); iterator.hasNext();){
+    				Account account = (Account) iterator.next();
+    				System.out.println("First Name: " + account.getFirstName());
+    			}
     		} catch (HibernateException e) {
     			if (tx!=null) tx.rollback();
     			e.printStackTrace();

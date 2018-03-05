@@ -12,8 +12,8 @@ public class Account {
     private UUID agency;
     private UUID citizenship;
     private String clearance;
-    private String Address_one;
-    private String Address_two;
+    private String Address1;
+    private String Address2;
     private String City;
     private UUID State;
     private int ZipCode;
@@ -23,10 +23,9 @@ public class Account {
     private boolean lock;
     
     public Account() {}
-    public Account(String firstName, String lastName, UUID uuid) {
+    public Account(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.uuid = uuid;
     }
 	public UUID getUuid() {
 		return uuid;
@@ -88,17 +87,17 @@ public class Account {
 	public void setClearance(String clearance) {
 		this.clearance = clearance;
 	}
-	public String getAddress_one() {
-		return Address_one;
+	public String getAddress1() {
+		return Address1;
 	}
-	public void setAddress_one(String address_one) {
-		Address_one = address_one;
+	public void setAddress1(String address1) {
+		Address1 = address1;
 	}
-	public String getAddress_two() {
-		return Address_two;
+	public String getAddress2() {
+		return Address2;
 	}
-	public void setAddress_two(String address_two) {
-		Address_two = address_two;
+	public void setAddress2(String address2) {
+		Address2 = address2;
 	}
 	public String getCity() {
 		return City;

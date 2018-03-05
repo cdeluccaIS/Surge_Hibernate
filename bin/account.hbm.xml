@@ -4,32 +4,33 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name = "com.employee.hibernate.Employee" table = "Account">
+    <class name = "com.employee.hibernate.Account" table = "Account">
 
         <meta attribute = "class-description">
             This class contains Account details.
         </meta>
 
-        <id name = "uuid" type = "UUID" column = "uuid">
+        <id name = "uuid" type = "uuid-char" column = "uuid">
             <generator class="native"/>
         </id>
-
+		
+		
         <property name = "firstName" column = "firstName" type = "string"/>
         <property name = "MiddleInitial" column = "Middle Initial" type = "char"/>
         <property name = "lastName" column = "lastName" type = "string"/>
         <property name = "Email" column = "Email" type = "string"/>
         <property name = "securePhone" column = "securePhone" type = "string"/>
         <property name = "uSecurePhone" column = "uSecurePhone" type = "string"/>
-        <property name = "agency" column = "agency" type = "UUID"/>
-        <property name = "citizenship" column = "citizenship" type = "UUID"/>
+        <property name = "agency" column = "agency" type = "uuid-char"/>
+        <property name = "citizenship" column = "citizenship" type = "uuid-char"/>
         <property name = "clearance" column = "clearance" type = "string"/>
         <property name = "Address1" column = "Address1" type = "string"/>
         <property name = "Address2" column = "Address2" type = "string"/>
         <property name = "City" column = "City" type = "string"/>
-        <property name = "State" column = "State" type = "UUID"/>
+        <property name = "State" column = "State" type = "uuid-char"/>
         <property name = "ZipCode" column = "ZipCode" type = "int"/>
-        <property name = "accountType" column = "accountType" type = "object"/>
-        <property name = "accountStatus" column = "accountStatus" type = "object"/>
+        <property name = "accountType" column = "accountType" type = "string"/>
+        <property name = "accountStatus" column = "accountStatus" type = "string"/>
         <property name = "password" column = "password" type = "string"/>
         <property name = "lock" column = "lock" type = "boolean"/>
 
