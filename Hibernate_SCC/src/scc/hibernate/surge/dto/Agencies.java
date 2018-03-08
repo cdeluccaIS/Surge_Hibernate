@@ -1,16 +1,23 @@
 package scc.hibernate.surge.dto;
 
 import java.util.UUID;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity (name="Agencies")
 public class Agencies {
 	@Id
+	@Column (name="uuid")
 	private UUID uuid;
-	private String agency_name = "default";
+	@Column (name="agency_name")
+	private String agency_name;
+	@Column (name="agency_code")
 	private String agency_code = "default";
-	private String location_id = "default";
+	@Column (name="location_id")
+	private String location_id;
+	
 	public UUID getUuid() {
 		return uuid;
 	}

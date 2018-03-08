@@ -1,19 +1,29 @@
 package scc.hibernate.surge.dto;
 
 import java.util.UUID;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity (name="Location")
 public class Location {
 	@Id
+	@Column (name="uuid")
 	private UUID uuid;
-	private String location_name = "--";
-	private String location_id = "--";
+	@Column (name="location_name")
+	private String location_name;
+	@Column (name="location_id")
+	private String location_id;
+	@Column (name="address1")
 	private String address1 = "--";
+	@Column (name="address2")
 	private String address2 = "--";
+	@Column (name="city")
 	private String city = "--";
+	@Column (name="state")
 	private UUID state;
+	@Column (name="zip_code")
 	private int zip_code;
 	
 	public UUID getUuid() {

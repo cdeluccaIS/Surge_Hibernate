@@ -9,7 +9,9 @@ import javax.persistence.Id;
 @Entity (name="State")
 public class State {
 	@Id
+	@Column (name="uuid")
 	private UUID uuid;
+	@Column (name="name")
 	private String name = "--";
 	@Column(name="abbr", columnDefinition="char(2)")
 	private String abbr = "XX";
