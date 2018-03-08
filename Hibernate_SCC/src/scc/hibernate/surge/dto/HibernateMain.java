@@ -182,8 +182,58 @@ public class HibernateMain {
 		commit(uploads, session);
 		*/
 		
-		/* Setup UploadProcessing */
-		/* Setup ACAS_ProdRef */
+		/* Setup UploadProcessing 
+		UploadsProcessing upProcess = new UploadsProcessing();
+		
+		upProcess.setUuid(rand4);		//dependent on rand4 in Uploads setup
+		upProcess.setDocument(rand5);	//dependent on rand5 in Uploads setup
+		upProcess.setUpload(rand6);		//dependent on rand6 in Uploads setup
+		upProcess.setpCompletion(6);
+		upProcess.setState("state");
+		commit(upProcess, session);
+		*/
+		
+		/* Setup ACAS_ProdRef 
+		ACAS_ProdRef acas_prodRef = new ACAS_ProdRef();
+		UUID rand7 = UUID.randomUUID();
+		UUID rand8 = UUID.randomUUID();
+		
+		acas_prodRef.setUuid(rand7);
+		acas_prodRef.setTopic("topic");
+		acas_prodRef.setTopic_dialect("topic_dialect");
+		acas_prodRef.setAddress("address");
+		acas_prodRef.setMeta(rand8);
+		commit(acas_prodRef, session);
+		*/
+		
+		/* Setup ACAS_ARF_Message table */
+		/* Setup ACAS_ARF_ReportObject table */
+		/* Setup ACAS_Meta table */
+		/* Setup ACAS_ARF_AR table */
+		/* Setup ACAS_ARF_Device table */
+		/* Setup ACAS_ARF_deviceID table */
+		/* Setup ACAS_ARF_Identifier table */
+		/* Setup ACAS_ARF_ID_FQDN table */
+		/* Setup ACAS_ARF_OPATTR table */
+		/* Setup ACAS_ARF_Config table */
+		/* Setup ACAS_ARF_NETCONFIG table */
+		/* Setup ACAS_ARF_Tagged table */
+		/* Setup ACAS_ARF_cpeRecord table */
+		/* Setup ACAS_ASR_PopulationCharacteristics table */
+		/* Setup ACAS_ASR_BenchMarkID table */
+		/* Setup ACAS_ASR_Benchmark table */
+		/* Setup ACAS_ASR_RuleResult table */
+		/* Setup ACAS_ASR_Message table */
+		/* Setup ACAS_ASR_ResultsPackage table */
+		/* Setup ACAS_ARF_NETINTID table */
+		/* Setup ACAS_ARF_PlatformName table */
+		/* Setup ACAS_ASR_Ident table */
+		/* Setup ACAS_ASR_RuleComplianceItem table */
+		/* Setup ACAS_ARF_HOSTDATA table */
+		/* Setup ACAS_ARF_AN table */
+		/* Setup ACAS_ASR_Result table */
+		/* Setup ACAS_ARF_IP table */
+		
 		
 		/* Fetch */
 		//session = sessionFactory.openSession();
