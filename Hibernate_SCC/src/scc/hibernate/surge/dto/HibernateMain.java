@@ -2,7 +2,6 @@ package scc.hibernate.surge.dto;
 
 import java.util.List;
 import java.util.UUID;
-
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -52,19 +51,25 @@ public class HibernateMain {
 		//session = sessionFactory.openSession();
 		//session.beginTransaction();
 		//UUID uuid = UUID.randomUUID();
-		String firstName = "Mike";
-		String lastName = "Moriarty";
-		String id = "b491eb69-72b2-4577-8766-63cfe5a9b32f";
-		UUID uuid = UUID.fromString(id);
+		String target = "Ali";
+		//String target = "Moriarty";
+		//String target = "b491eb69-72b2-4577-8766-63cfe5a9b32f";
+		AccountDetails user_uuid = null;
 		try {
-			AccountDetails name = firstNamefind(firstName, agency, account, session);
-			AccountDetails last_name = lastNamefind(lastName, agency, account, session);
-			AccountDetails user_uuid = uuidfind(uuid, agency, account, session);
+			UUID uuid = UUID.fromString(target);
+			user_uuid = uuidfind(uuid, agency, account, session);
+		}
+		catch (Exception e) {}
+		
+		try {
+			AccountDetails name = firstNamefind(target, agency, account, session);
+			AccountDetails last_name = lastNamefind(target, agency, account, session);
+			
 			
 			String fetchOn = null;
 			if (name.getFirstName() != null) {
 				account=name;
-				fetchOn="name";
+				fetchOn="first_name";
 			} else if (last_name.getFirstName() != null) {
 				account=last_name;
 				fetchOn="last_name";

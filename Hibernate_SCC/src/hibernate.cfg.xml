@@ -51,6 +51,7 @@
         <!-- Names the annotated entity class -->
         <mapping class="scc.hibernate.surge.dto.AccountDetails"/>
         <mapping class="scc.hibernate.surge.dto.Agencies"/>
+        <mapping class="scc.hibernate.surge.dto.Location"/>
     </session-factory>
  
 </hibernate-configuration>
