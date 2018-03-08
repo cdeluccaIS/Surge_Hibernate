@@ -52,6 +52,7 @@ public class HibernateMain {
 		String string_uuid2 = "3cae79e3-0857-46f4-a571-162e01757ab3";
 		UUID state_uuid = UUID.fromString(string_uuid);
 		UUID set_uuid = UUID.fromString(string_uuid2);
+		
 		location.setState(state_uuid);
 		location.setUuid(set_uuid);
 		location.setLocation_name("Texas");
@@ -66,10 +67,12 @@ public class HibernateMain {
 		state.setUuid(state_uuid);  dependent on Location UUIDfromString for state_uuid
 		commit(state, session);
 		 */
+		
 		/* Setup Country table
 		Country country = new Country();
 		String string_uuid3 = "7aa65057-f930-40ce-990e-d2eaa78e0470";
 		UUID country_uuid = UUID.fromString(string_uuid3);
+		
 		country.setAbbr("USA");;
 		country.setName("United State of America");
 		country.setUuid(country_uuid);
@@ -78,12 +81,13 @@ public class HibernateMain {
 		
 		/* Setup Audit table 
 		Audit audit = new Audit();
-		audit.setEvent("Full System Audit");
-		audit.setEventType("Audit");
 		String string_uuid4 = "df2fe4be-20c4-442d-ac66-ac06ed4cf303";
 		UUID audit_uuid = UUID.fromString(string_uuid4);
 		String string_uuid5 = "b491eb69-72b2-4577-8766-63cfe5a9b32f";
 		UUID user_uuid2 = UUID.fromString(string_uuid5);
+		
+		audit.setEvent("Full System Audit");
+		audit.setEventType("Audit");
 		audit.setUuid(audit_uuid);
 		audit.setUser_uuid(user_uuid2);
 		commit(audit, session);
@@ -92,26 +96,58 @@ public class HibernateMain {
 		/* Setup Application table
 		Application app = new Application();
 		UUID app_uuid = UUID.randomUUID();
-		app.setUuid(app_uuid);
 		String timeZone = "UTC";
-		app.setTimeZone(timeZone);
 		String sysTime = getCurrentTimeStamp();
-		app.setSysTime(sysTime);
 		String version="1.0";
-		app.setVersion(version);
 		String build="Initial";
-		app.setBuild(build);
 		Date releaseDate = new Date();
-		app.setReleaseDate(releaseDate);
 		String os="WIN";
+		
+		app.setUuid(app_uuid);
+		app.setTimeZone(timeZone);
+		app.setSysTime(sysTime);
+		app.setVersion(version);
+		app.setBuild(build);
+		app.setReleaseDate(releaseDate);
 		app.setOs(os);
 		commit(app,session);
 		*/
 		
-		/* Setup Application Notices table */
+		/* Setup Application Notices table
+		ApplicationNotices appNotice = new ApplicationNotices();
+		UUID appNotice_uuid=UUID.randomUUID();
+		Date setDate= new Date();
+		
+		appNotice.setUuid(appNotice_uuid);
+		appNotice.setName("Initial");
+		appNotice.setNotice("INITIAL CONFIG");
+		appNotice.setDatetime(setDate);
+		commit(appNotice, session);
+		*/
+		
 		/* Setup Account State History */
-		/* Setup Documentation table */
+		
+		/* Setup Documentation table 
+		Documentation doc = new Documentation();
+		UUID doc_uuid=UUID.randomUUID();
+		
+		doc.setUuid(doc_uuid);
+		doc.setXmlTemplate("<XML TEMPLATE>");
+		doc.setXlsTemplate("<xlsTemplate>");
+		doc.setJsonTemplate("{jsonTemplate}");
+		doc.setInstructions("instructions");
+		doc.setApilmpDoc("apilmpDoc");
+		commit(doc, session);
+		*/
+		
 		/* Setup Document table */
+		Document document = new Document();
+		UUID document_uuid = UUID.randomUUID();
+		
+		document.setUuid(document_uuid);
+		document.setLocation("location");
+		commit(document, session);
+		
 		/* Setup Uploads table */
 		/* Setup UploadProcessing */
 		/* Setup ACAS_ProdRef */
@@ -120,7 +156,7 @@ public class HibernateMain {
 		//session = sessionFactory.openSession();
 		//session.beginTransaction();
 		//UUID uuid = UUID.randomUUID();
-		String target = "Ali";
+		String target = "John";
 		//String target = "Moriarty";
 		//String target = "b491eb69-72b2-4577-8766-63cfe5a9b32f";
 		AccountDetails user_uuid = null;
