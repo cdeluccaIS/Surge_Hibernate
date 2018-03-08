@@ -6,13 +6,14 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Entity (name="State")
-public class State {
+@Entity (name="Country")
+public class Country {
 	@Id
 	private UUID uuid;
 	private String name = "--";
-	@Column(name="abbr", columnDefinition="char(2)")
-	private String abbr = "XX";
+	@Column(name="abbr", columnDefinition="char(3)")
+	private String abbr = "---";
+	
 	public UUID getUuid() {
 		return uuid;
 	}

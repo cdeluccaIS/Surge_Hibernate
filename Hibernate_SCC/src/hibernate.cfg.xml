@@ -17,7 +17,7 @@
         <property name="hibernate.connection.username">theowner</property>
         <property name="hibernate.connection.password">test_pass</property>
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL94Dialect</property>
-        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
         <property name="show_sql">true</property>
         
         <property name="hibernate.connection.pool_size">5</property>
