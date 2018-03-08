@@ -27,15 +27,20 @@ public class HibernateMain {
 		*/
 		
 		/* Set up Account table
-		
 		account.setUuid(uuid);
 		account.setFirstName("John");
 		account.setLastName("Davis");
 		account.setAgency(agent_uuid2);
 		commit(account, session);	
 		*/
-		/* Setup Location table */
-		/* Setup State table */
+		
+		/* Setup Location table 
+		Location location = new Location();
+		*/
+		
+		/* Setup State table
+		State state = new State();
+		 */
 		/* Setup Country table */
 		/* Setup Audit table */
 		/* Setup Application table */
