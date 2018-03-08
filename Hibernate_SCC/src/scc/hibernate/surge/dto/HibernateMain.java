@@ -1,7 +1,6 @@
 package scc.hibernate.surge.dto;
 
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
@@ -125,7 +124,22 @@ public class HibernateMain {
 		commit(appNotice, session);
 		*/
 		
-		/* Setup Account State History */
+		/* Setup Account State History 
+		AccountStateHistory ash = new AccountStateHistory();
+		UUID rand1 = UUID.randomUUID();
+		UUID rand2 = UUID.randomUUID();
+		UUID rand3 = UUID.randomUUID();
+		Date ash_now = new Date();
+		
+		ash.setUuid(rand1);
+		ash.setAccount(rand2);
+		ash.setAdmin(rand3);
+		ash.setStatus("status");
+		ash.setDate(ash_now);
+		ash.setJustification("justification");
+		commit(ash, session);
+		*/
+		
 		
 		/* Setup Documentation table 
 		Documentation doc = new Documentation();
@@ -140,15 +154,34 @@ public class HibernateMain {
 		commit(doc, session);
 		*/
 		
-		/* Setup Document table */
+		/* Setup Document table 
 		Document document = new Document();
 		UUID document_uuid = UUID.randomUUID();
 		
 		document.setUuid(document_uuid);
 		document.setLocation("location");
 		commit(document, session);
+		*/
 		
-		/* Setup Uploads table */
+		/* Setup Uploads table 
+		Uploads uploads = new Uploads();
+		UUID rand4 = UUID.randomUUID();
+		UUID rand5 = UUID.randomUUID();
+		UUID rand6 = UUID.randomUUID();
+		Date up_now = new Date();
+		long stamp = up_now.getTime();
+		
+		uploads.setUuid(rand4);
+		uploads.setFileLocation("fileLocation");
+		uploads.setDate(up_now);
+		uploads.setType("type");
+		uploads.setState(rand5);
+		uploads.setAuthority(rand6);
+		uploads.setStatus("status");
+		uploads.setTimestamp(stamp);
+		commit(uploads, session);
+		*/
+		
 		/* Setup UploadProcessing */
 		/* Setup ACAS_ProdRef */
 		
