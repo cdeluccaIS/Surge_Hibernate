@@ -1,5 +1,8 @@
 package scc.hibernate.surge.dto;
 
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 import org.hibernate.Criteria;
@@ -13,10 +16,17 @@ public class HibernateMain {
 
 	public static void main(String[] args) {
 		
+		/* Build our sesssion to use for db interaction */
+		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+		Session session = sessionFactory.openSession();
+		AccountDetails account = new AccountDetails();
+		Agencies agency = new Agencies();
+		
 		/* Set up Agency table 
 		UUID agent_uuid = UUID.randomUUID();
 		agency.setUuid(agent_uuid);
 		agency.setAgency_name("NSA");
+		agency.setLocation_id("ZZZ");
 		commit(agency, session);
 		agency = null;
 		
@@ -24,6 +34,7 @@ public class HibernateMain {
 		agency = new Agencies();
 		agency.setUuid(agent_uuid2);
 		agency.setAgency_name("DIA");
+		agency.setLocation_id("YYY");
 		commit(agency, session);
 		*/
 		
@@ -55,21 +66,56 @@ public class HibernateMain {
 		state.setUuid(state_uuid);  dependent on Location UUIDfromString for state_uuid
 		commit(state, session);
 		 */
-		/* Setup Country table */
-		/* Setup Audit table */
-		/* Setup Application table */
+		/* Setup Country table
+		Country country = new Country();
+		String string_uuid3 = "7aa65057-f930-40ce-990e-d2eaa78e0470";
+		UUID country_uuid = UUID.fromString(string_uuid3);
+		country.setAbbr("USA");;
+		country.setName("United State of America");
+		country.setUuid(country_uuid);
+		commit(country, session);
+		 */
 		
-		/* Build our sesssion to use for db interaction */
-		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
-		Session session = sessionFactory.openSession();
-		AccountDetails account = new AccountDetails();
-		Agencies agency = new Agencies();
+		/* Setup Audit table 
+		Audit audit = new Audit();
+		audit.setEvent("Full System Audit");
+		audit.setEventType("Audit");
+		String string_uuid4 = "df2fe4be-20c4-442d-ac66-ac06ed4cf303";
+		UUID audit_uuid = UUID.fromString(string_uuid4);
+		String string_uuid5 = "b491eb69-72b2-4577-8766-63cfe5a9b32f";
+		UUID user_uuid2 = UUID.fromString(string_uuid5);
+		audit.setUuid(audit_uuid);
+		audit.setUser_uuid(user_uuid2);
+		commit(audit, session);
+		*/
 		
+		/* Setup Application table
+		Application app = new Application();
+		UUID app_uuid = UUID.randomUUID();
+		app.setUuid(app_uuid);
+		String timeZone = "UTC";
+		app.setTimeZone(timeZone);
+		String sysTime = getCurrentTimeStamp();
+		app.setSysTime(sysTime);
+		String version="1.0";
+		app.setVersion(version);
+		String build="Initial";
+		app.setBuild(build);
+		Date releaseDate = new Date();
+		app.setReleaseDate(releaseDate);
+		String os="WIN";
+		app.setOs(os);
+		commit(app,session);
+		*/
 		
+		/* Setup Application Notices table */
+		/* Setup Account State History */
+		/* Setup Documentation table */
+		/* Setup Document table */
+		/* Setup Uploads table */
+		/* Setup UploadProcessing */
+		/* Setup ACAS_ProdRef */
 		
-		
-
-
 		/* Fetch */
 		//session = sessionFactory.openSession();
 		//session.beginTransaction();
@@ -158,6 +204,10 @@ public class HibernateMain {
 		((SharedSessionContract) session).beginTransaction();
 		((Session) session).save(data);
 		((SharedSessionContract) session).getTransaction().commit();
+	}
+	
+	public static String getCurrentTimeStamp() {
+	    return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new Date());
 	}
 		
 }

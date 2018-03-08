@@ -7,8 +7,6 @@ import javax.persistence.Id;
 
 @Entity (name="Account")
 public class AccountDetails {
-	
-	private int id;
 	@Id
 	@Column (name="uuid")
 	private UUID uuid;
@@ -30,12 +28,7 @@ public class AccountDetails {
     private String accountStatus = "--";
     private String password = "--";
     private boolean lock = false;
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
+
 	public UUID getUuid() {
 		return uuid;
 	}

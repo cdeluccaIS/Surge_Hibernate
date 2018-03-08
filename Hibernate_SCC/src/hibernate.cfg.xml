@@ -53,6 +53,9 @@
         <mapping class="scc.hibernate.surge.dto.Agencies"/>
         <mapping class="scc.hibernate.surge.dto.Location"/>
         <mapping class="scc.hibernate.surge.dto.State"/>
+        <mapping class="scc.hibernate.surge.dto.Country"/> 
+        <mapping class="scc.hibernate.surge.dto.Audit"/>
+        <mapping class="scc.hibernate.surge.dto.Application"/>
     </session-factory>
  
 </hibernate-configuration>
