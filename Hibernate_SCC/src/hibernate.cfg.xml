@@ -63,6 +63,19 @@
         <mapping class="scc.hibernate.surge.dto.Document"/>
         <mapping class="scc.hibernate.surge.dto.AccountStateHistory"/>
         <mapping class="scc.hibernate.surge.dto.Uploads"/>
+        <mapping class="scc.hibernate.surge.dto.UploadsProcessing"/>
+        <mapping class="scc.hibernate.surge.dto.ACAS_ProdRef"/>
+        <mapping class="scc.hibernate.surge.dto.ACAS_ARF_Message"/>
+        <mapping class="scc.hibernate.surge.dto.ACAS_ARF_ReportObject"/>
+        <mapping class="scc.hibernate.surge.dto.ACAS_Meta"/>
+        <mapping class="scc.hibernate.surge.dto.ACAS_ARF_AR"/>
+        <mapping class="scc.hibernate.surge.dto.ACAS_Device"/>
+        <mapping class="scc.hibernate.surge.dto.ACAS_deviceID"/>
+        <mapping class="scc.hibernate.surge.dto.ACAS_Identifier"/>
+        <mapping class="scc.hibernate.surge.dto.ACAS_ID_FQDN"/>
+        <mapping class="scc.hibernate.surge.dto.ACAS_ARF_OPATTR"/>
+        <mapping class="scc.hibernate.surge.dto.ACAS_ARF_Config"/>
+        
     </session-factory>
  
 </hibernate-configuration>
