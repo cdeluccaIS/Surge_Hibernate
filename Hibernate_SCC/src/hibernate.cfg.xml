@@ -59,6 +59,8 @@
         <mapping class="scc.hibernate.surge.dto.ApplicationNotices"/>
         <mapping class="scc.hibernate.surge.dto.Documentation"/>
         <mapping class="scc.hibernate.surge.dto.Document"/>
+        <mapping class="scc.hibernate.surge.dto.AccountStateHistory"/>
+        <mapping class="scc.hibernate.surge.dto.Uploads"/>
     </session-factory>
  
 </hibernate-configuration>
