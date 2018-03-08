@@ -19,6 +19,7 @@ public class HibernateMain {
 		agency.setAgency_name("NSA");
 		commit(agency, session);
 		agency = null;
+		
 		UUID agent_uuid2 = UUID.randomUUID();
 		agency = new Agencies();
 		agency.setUuid(agent_uuid2);
@@ -36,10 +37,23 @@ public class HibernateMain {
 		
 		/* Setup Location table 
 		Location location = new Location();
+		String string_uuid = "70b26c4b-4005-4ae3-a852-b5b227055b4c";
+		String string_uuid2 = "3cae79e3-0857-46f4-a571-162e01757ab3";
+		UUID state_uuid = UUID.fromString(string_uuid);
+		UUID set_uuid = UUID.fromString(string_uuid2);
+		location.setState(state_uuid);
+		location.setUuid(set_uuid);
+		location.setLocation_name("Texas");
+		location.setLocation_id("TX");
+		commit(location, session);
 		*/
 		
 		/* Setup State table
 		State state = new State();
+		state.setAbbr("TX");
+		state.setName("Texas");
+		state.setUuid(state_uuid);  dependent on Location UUIDfromString for state_uuid
+		commit(state, session);
 		 */
 		/* Setup Country table */
 		/* Setup Audit table */
@@ -50,6 +64,10 @@ public class HibernateMain {
 		Session session = sessionFactory.openSession();
 		AccountDetails account = new AccountDetails();
 		Agencies agency = new Agencies();
+		
+		
+		
+		
 
 
 		/* Fetch */
