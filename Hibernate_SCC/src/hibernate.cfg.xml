@@ -56,6 +56,9 @@
         <mapping class="scc.hibernate.surge.dto.Country"/> 
         <mapping class="scc.hibernate.surge.dto.Audit"/>
         <mapping class="scc.hibernate.surge.dto.Application"/>
+        <mapping class="scc.hibernate.surge.dto.ApplicationNotices"/>
+        <mapping class="scc.hibernate.surge.dto.Documentation"/>
+        <mapping class="scc.hibernate.surge.dto.Document"/>
     </session-factory>
  
 </hibernate-configuration>
