@@ -76,6 +76,21 @@
         <mapping class="scc.hibernate.surge.dto.ACAS_ARF_OPATTR"/>
         <mapping class="scc.hibernate.surge.dto.ACAS_ARF_Config"/>
         <mapping class="scc.hibernate.surge.dto.ACAS_ARF_Tagged"/>
+        <mapping class="scc.hibernate.surge.dto.ACAS_ARF_cpeRecord"/>
+        <mapping class="scc.hibernate.surge.dto.ACAS_ASR_PopulationCharacteristics"/>
+        <mapping class="scc.hibernate.surge.dto.ACAS_ASR_BenchMarkID"/>
+        <mapping class="scc.hibernate.surge.dto.ACAS_ASR_Benchmark"/>
+        <mapping class="scc.hibernate.surge.dto.ACAS_ASR_RuleResult"/>
+        <mapping class="scc.hibernate.surge.dto.ACAS_ASR_Message"/>
+        <mapping class="scc.hibernate.surge.dto.ACAS_ASR_ResultsPackage"/>
+        <mapping class="scc.hibernate.surge.dto.ACAS_ARF_NETINTID"/>
+        <mapping class="scc.hibernate.surge.dto.ACAS_ARF_PlatformName"/>
+        <mapping class="scc.hibernate.surge.dto.ACAS_ASR_Ident"/>
+        <mapping class="scc.hibernate.surge.dto.ACAS_ASR_RuleComplianceItem"/>
+        <mapping class="scc.hibernate.surge.dto.ACAS_ARF_HOSTDATA"/>
+        <mapping class="scc.hibernate.surge.dto.ACAS_ARF_AN"/>
+        <mapping class="scc.hibernate.surge.dto.ACAS_ASR_Result"/>
+        <mapping class="scc.hibernate.surge.dto.ACAS_ARF_IP"/>
         
     </session-factory>
  
