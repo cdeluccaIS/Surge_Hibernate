@@ -36,9 +36,9 @@ public class AccountDetails {
     private String city = "--";
 	@Column (name="State")
     private String State = "--";
-	@Column (name="State")
+	@Column (name="ZipCode")
     private int ZipCode = 12345;
-	@Column (name="State")
+	@Column (name="accountType")
     private String accountType;
 	@Column (name="accountStatus")
     private String accountStatus;
