@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsnt:Notify xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsnt="http://docs.oasis-open.org/wsn/b-2" xmlns:wsa="http://w3.org/2005/08/addressing" xmlns:tagged_value="http://metadata.dod.mil/mdr/ns/netops/shared_data/tagged_value/0.41">
+	<wsnt:NotificationMessage>
+		<wsnt:Topic Dialect="http://docs.oasis-open.org/wsn/t-1/TopicExpression/Simple">acas.assetdata</wsnt:Topic>
+		<wsnt:ProducerReference>
+			<wsa:Address>hostname.of.securitycenter.com</wsa:Address>
+			<wsa:Metadata>
+				<wsa:MessageID>hostname.of.securitycenter.com:acas.cve.results::1338</wsa:MessageID>
+				<tagged_value:taggedString value="5.6.1" name="SecurityCenter Data Publisher Version" />
+			</wsa:Metadata>
+		</wsnt:ProducerReference>
+		<wsnt:Message>
+			<ar:AssessmentReport xmlns:ar="http://metadata.dod.mil/mdr/ns/netops/shared_data/assessment_report/0.41" 
+								 xmlns:device="http://metadata.dod.mil/mdr/ns/netops/shared_data/device/0.41" 
+								 xmlns:cpe="http://scap.nist.gov/schema/cpe-record/0.1" 
+								 xmlns:tagged_value="http://metadata.dod.mil/mdr/ns/netops/shared_data/tagged_value/0.41" 
+								 xmlns:cndc="http://metadata.dod.mil/mdr/ns/netops/net-defense/cnd-core/0.41">
+				<ar:reportObject>
+					<ar:device timestamp="2018-01-30T14:09:14+00:00">
+						<device:device_ID>
+							<cndc:resource>hostname.of.securitycenter.com</cndc:resource>
+							<cndc:record_identifier>host1.domain.com</cndc:record_identifier>
+						</device:device_ID>
+						<device:identifiers>
+							<device:FQDN source="DNS">
+								<device:realm>domain.com</device:realm>
+								<device:host_name>host1</device:host_name>
+							</device:FQDN>
+							<device:FQDN source="NETBIOS">
+								<device:realm>domain.com</device:realm>
+								<device:host_name>host1</device:host_name>
+							</device:FQDN>
+						</device:identifiers>
+						<device:operational_attributes>
+							<cndc:resource>hostname.of.securitycenter.com</cndc:resource>
+							<cndc:record_identifier>1:1</cndc:record_identifier>
+						</device:operational_attributes>
+						<device:configuration>
+							<device:network_configuration>
+								<device:network_interface_ID>10.10.10.1</device:network_interface_ID>
+								<device:host_network_data>
+									<device:connection_ip>
+										<cndc:IPv4>10.10.10.1</cndc:IPv4>
+									</device:connection_ip>
+								</device:host_network_data>
+							</device:network_configuration>
+							<device:cpe_inventory>
+								<device:cpe_record>
+									<cpe:platformName>
+										<cpe:assessedName name="cpe:/o:linux:linux_kernel:2.2"/>
+									</cpe:platformName>
+								</device:cpe_record>
+							</device:cpe_inventory>
+						</device:configuration>
+						<tagged_value:taggedString name="LastCredScanPluginVers" value="201709251515"/>
+						<tagged_value:taggedString name="ScanPolicy" value="9acdf723-6281-5990-ace2-685f1f1f5555-2233223/Agency1 Scan Policy"/>
+					</ar:device>
+				</ar:reportObject>
+				<ar:reportObject>
+					<ar:device timestamp="2018-01-30T14:09:14+00:00">
+						<device:device_ID>
+							<cndc:resource>hostname.of.securitycenter.com</cndc:resource>
+							<cndc:record_identifier>host2.domain.com</cndc:record_identifier>
+						</device:device_ID>
+						<device:identifiers>
+							<device:FQDN source="DNS">
+								<device:realm>domain.com</device:realm>
+								<device:host_name>host2</device:host_name>
+							</device:FQDN>
+						</device:identifiers>
+						<device:operational_attributes>
+							<cndc:resource>hostname.of.securitycenter.com</cndc:resource>
+							<cndc:record_identifier>1:1</cndc:record_identifier>
+						</device:operational_attributes>
+						<device:configuration>
+							<device:network_configuration>
+								<device:network_interface_ID>10.10.10.2</device:network_interface_ID>
+								<device:host_network_data>
+									<device:connection_mac_address>ff:ff:ff:ff:ff:01</device:connection_mac_address>
+									<device:connection_ip>
+										<cndc:IPv4>10.10.10.2</cndc:IPv4>
+									</device:connection_ip>
+								</device:host_network_data>
+							</device:network_configuration>
+							<device:cpe_inventory>
+								<device:cpe_record>
+									<cpe:platformName>
+										<cpe:assessedName name="cpe:/o:microsoft:windows_10:::x64-enterprise"/>
+									</cpe:platformName>
+								</device:cpe_record>
+							</device:cpe_inventory>
+						</device:configuration>
+						<tagged_value:taggedString name="LastCredScanPluginVers" value="201709251515"/>
+						<tagged_value:taggedString name="ScanPolicy" value="9acdf723-6281-5990-ace2-685f1f1f5555-2233223/Agency1 Scan Policy"/>
+						<tagged_value:taggedString name="LastCredScan" value="2018-01-27T13:16:48+00:00"/>
+						<tagged_value:taggedString name="BIOSGUID" value="325B9000-2EB3-11E0-0000-2C4138999FFA"/>
+						<tagged_value:taggedString name="McAfeeAgentGUID" value="{C02C9696-33A6-4475-B7AE-C998899FF991"/>
+					</ar:device>
+				</ar:reportObject>
+				<ar:reportObject>
+					<ar:device timestamp="2018-01-30T14:09:14+00:00">
+						<device:device_ID>
+							<cndc:resource>hostname.of.securitycenter.com</cndc:resource>
+							<cndc:record_identifier>host3.domain.com</cndc:record_identifier>
+						</device:device_ID>
+						<device:identifiers>
+							<device:FQDN source="DNS">
+								<device:realm>domain.com</device:realm>
+								<device:host_name>host3</device:host_name>
+							</device:FQDN>
+						</device:identifiers>
+						<device:operational_attributes>
+							<cndc:resource>hostname.of.securitycenter.com</cndc:resource>
+							<cndc:record_identifier>1:1</cndc:record_identifier>
+						</device:operational_attributes>
+						<device:configuration>
+							<device:network_configuration>
+								<device:network_interface_ID>10.10.10.3</device:network_interface_ID>
+								<device:host_network_data>
+									<device:connection_mac_address>ff:ff:ff:ff:ff:02</device:connection_mac_address>
+									<device:connection_ip>
+										<cndc:IPv4>10.10.10.3</cndc:IPv4>
+									</device:connection_ip>
+								</device:host_network_data>
+							</device:network_configuration>
+							<device:cpe_inventory>
+								<device:cpe_record>
+									<cpe:platformName>
+										<cpe:assessedName name="cpe:/o:microsoft:windows_7::sp1:x64-enterprise"/>
+									</cpe:platformName>
+								</device:cpe_record>
+							</device:cpe_inventory>
+						</device:configuration>
+						<tagged_value:taggedString name="LastCredScanPluginVers" value="201709251415"/>
+						<tagged_value:taggedString name="ScanPolicy" value="9acdf723-6281-5990-ace2-685f1f1f5555-2233223/Agency1 Scan Policy"/>
+						<tagged_value:taggedString name="LastCredScan" value="2018-01-27T17:09:48+00:00"/>
+						<tagged_value:taggedString name="BIOSGUID" value="325B5555-2E55-11E0-0050-2C4138999FFA"/>
+						<tagged_value:taggedString name="McAfeeAgentGUID" value="{EEEC9696-33A6-4EE5-B7AE-CEEEE99FF991"/>
+					</ar:device>
+				</ar:reportObject>
+			</ar:AssessmentReport>
+		</wsnt:Message>
+	</wsnt:NotificationMessage>
+</wsnt:Notify>
+				
