@@ -10,15 +10,15 @@ public class ACAS_ARF_AR{
 	@Id
 	@Column (name="uuid")
 	private UUID uuid;
-	@Column (name="xmlns:ar")
+	@Column (name="xmlns_ar")
 	private String xmlns_ar;
-	@Column (name="xmlns:device")
+	@Column (name="xmlns_device")
 	private String xmlns_device;
-	@Column (name="xmlns:cpe")
+	@Column (name="xmlns_cpe")
 	private String xmlns_cpe;
-	@Column (name="xmlns:tagValue")
+	@Column (name="xmlns_tagValue")
 	private String xmlns_tagValue;
-	@Column (name="xmlns:cndc")
+	@Column (name="xmlns_cndc")
 	private String xmlns_cndc;
 	public UUID getUuid() {
 		return uuid;

@@ -11,15 +11,53 @@ import org.hibernate.SharedSessionContract;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.criterion.Restrictions;
 
+
 public class HibernateMain {
 
 	public static void main(String[] args) {
+		/* Test DAO methods */
+		AccountDAO accounts = new AccountDAO();
+		AccountDetails user_account = new AccountDetails();
 		
-		/* Build our sesssion to use for db interaction */
+		/*UUID uuid1 = UUID.randomUUID();
+		UUID rand1 = UUID.randomUUID();
+		UUID rand2 = UUID.randomUUID();
+		user_account.setUuid(uuid);
+		user_account.setFirstName("Ronald");
+		user_account.setMiddleInitial('T');
+		user_account.setLastName("Reagan");
+		user_account.setEmail("email@email.org");
+		user_account.setSecurePhone("securePhone");
+		user_account.setAgency(rand1);
+		user_account.setCitizenship(rand2);
+		user_account.setClearance("TS:PPP");
+		user_account.setAccountType("God");
+		user_account.setAccountStatus("Active");
+		user_account.setPassword("password");
+		user_account.setLock(false);
+		*/
+		
+		UUID uuid1 = UUID.fromString("f0b36bfa-4ed6-4709-9151-e73d0b783837");
+		user_account.setUuid(uuid1);
+		//accounts.addAccount(user_account);
+		//accounts.updateAccount(user_account);
+		//accounts.deleteAccount(user_account);
+		
+		List inDB = accounts.getAccounts();
+		
+		for (int i=0; i < inDB.size(); i++) {
+			AccountDetails data = (AccountDetails) inDB.get(i);
+			System.out.print("Name: " + data.getFirstName());
+			System.out.print(" " + data.getLastName() + " " + "UUID: " + data.getUuid() + "\n");
+		}
+	}
+		
+		/* Build our sesssion to use for db interaction 
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 		Session session = sessionFactory.openSession();
 		AccountDetails account = new AccountDetails();
 		Agencies agency = new Agencies();
+		*/
 		
 		/* Set up Agency table 
 		UUID agent_uuid = UUID.randomUUID();
@@ -38,12 +76,14 @@ public class HibernateMain {
 		*/
 		
 		/* Set up Account table
+		UUID uuid = UUID.fromString("b491eb69-72b2-4577-8766-63cfe5a9b32f");
 		account.setUuid(uuid);
 		account.setFirstName("John");
 		account.setLastName("Davis");
 		account.setAgency(agent_uuid2);
-		commit(account, session);	
+		commit(account, session);
 		*/
+		
 		
 		/* Setup Location table 
 		Location location = new Location();
@@ -124,7 +164,7 @@ public class HibernateMain {
 		commit(appNotice, session);
 		*/
 		
-		/* Setup Account State History 
+		/* Setup Account State History
 		AccountStateHistory ash = new AccountStateHistory();
 		UUID rand1 = UUID.randomUUID();
 		UUID rand2 = UUID.randomUUID();
@@ -139,6 +179,7 @@ public class HibernateMain {
 		ash.setJustification("justification");
 		commit(ash, session);
 		*/
+		
 		
 		
 		/* Setup Documentation table 
@@ -239,13 +280,14 @@ public class HibernateMain {
 		//session = sessionFactory.openSession();
 		//session.beginTransaction();
 		//UUID uuid = UUID.randomUUID();
+/*
 		String target = "John";
 		//String target = "Moriarty";
 		//String target = "b491eb69-72b2-4577-8766-63cfe5a9b32f";
 		AccountDetails user_uuid = null;
 		try {
-			UUID uuid = UUID.fromString(target);
-			user_uuid = uuidfind(uuid, agency, account, session);
+			UUID uuid1 = UUID.fromString(target);
+			user_uuid = uuidfind(uuid1, agency, account, session);
 		}
 		catch (Exception e) {}
 		
@@ -257,13 +299,13 @@ public class HibernateMain {
 			String fetchOn = null;
 			if (name.getFirstName() != null) {
 				account=name;
-				fetchOn="first_name";
+				fetchOn="First Name";
 			} else if (last_name.getFirstName() != null) {
 				account=last_name;
-				fetchOn="last_name";
+				fetchOn="Last Name";
 			} else if (user_uuid.getFirstName() != null) {
 				account=user_uuid;
-				fetchOn="uuid";
+				fetchOn="UUID";
 			}
 			
 			UUID agency_code = account.getAgency();
@@ -279,16 +321,16 @@ public class HibernateMain {
 	     	throw e;
 	 	}
 		finally {
-			/* Close our session */
+			/* Close our session 
 			session.close();
 		}
 	}
-		
+*/	
 	
-	public static AccountDetails firstNamefind(String name, Agencies agency, AccountDetails account, Session session) {
+	public static AccountDetails firstNamefind(String fname, String lname, Agencies agency, AccountDetails account, Session session) {
 		
 		Criteria criteria = session.createCriteria(AccountDetails.class);
-		List<AccountDetails> list = (List<AccountDetails>) criteria.add(Restrictions.eq("firstName", name)).list();
+		List<AccountDetails> list = (List<AccountDetails>) criteria.add(Restrictions.eq("firstName", fname)).list();
 		
 		for (int i=0; i < list.size(); i++) {
 			account = list.get(i);
