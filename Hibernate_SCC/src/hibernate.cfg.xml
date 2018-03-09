@@ -69,10 +69,10 @@
         <mapping class="scc.hibernate.surge.dto.ACAS_ARF_ReportObject"/>
         <mapping class="scc.hibernate.surge.dto.ACAS_Meta"/>
         <mapping class="scc.hibernate.surge.dto.ACAS_ARF_AR"/>
-        <mapping class="scc.hibernate.surge.dto.ACAS_Device"/>
-        <mapping class="scc.hibernate.surge.dto.ACAS_deviceID"/>
-        <mapping class="scc.hibernate.surge.dto.ACAS_Identifier"/>
-        <mapping class="scc.hibernate.surge.dto.ACAS_ID_FQDN"/>
+        <mapping class="scc.hibernate.surge.dto.ACAS_ARF_Device"/>
+        <mapping class="scc.hibernate.surge.dto.ACAS_ARF_deviceID"/>
+        <mapping class="scc.hibernate.surge.dto.ACAS_ARF_Identifier"/>
+        <mapping class="scc.hibernate.surge.dto.ACAS_ARF_ID_FQDN"/>
         <mapping class="scc.hibernate.surge.dto.ACAS_ARF_OPATTR"/>
         <mapping class="scc.hibernate.surge.dto.ACAS_ARF_Config"/>
         <mapping class="scc.hibernate.surge.dto.ACAS_ARF_Tagged"/>
