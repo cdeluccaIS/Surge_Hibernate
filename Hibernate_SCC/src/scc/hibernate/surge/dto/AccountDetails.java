@@ -10,24 +10,42 @@ public class AccountDetails {
 	@Id
 	@Column (name="uuid")
 	private UUID uuid;
+	@Column (name="firstName")
     private String firstName;
+	@Column (name="middleInitial")
     private char middleInitial = '?';
-    private String lastName = "--";
-    private String Email = "--";
-    private String securePhone = "--";
+	@Column (name="lastName")
+    private String lastName;
+	@Column (name="Email")
+    private String Email;
+	@Column (name="securePhone")
+    private String securePhone;
+	@Column (name="uSecurePhone")
     private String uSecurePhone = "--";
+	@Column (name="agency")
     private UUID agency;
-    private String citizenship = "--";
-    private String clearance = "--";
+	@Column (name="citizenship")
+    private UUID citizenship;
+	@Column (name="clearance")
+    private String clearance;
+	@Column (name="Address1")
     private String Address1 = "--";
+	@Column (name="Address2")
     private String Address2 = "--";
-    private String City = "--";
+	@Column (name="City")
+    private String city = "--";
+	@Column (name="State")
     private String State = "--";
+	@Column (name="State")
     private int ZipCode = 12345;
-    private String accountType = "--";
-    private String accountStatus = "--";
-    private String password = "--";
-    private boolean lock = false;
+	@Column (name="State")
+    private String accountType;
+	@Column (name="accountStatus")
+    private String accountStatus;
+	@Column (name="password")
+    private String password;
+	@Column (name="lock")
+    private boolean lock;
 
 	public UUID getUuid() {
 		return uuid;
@@ -77,10 +95,10 @@ public class AccountDetails {
 	public void setAgency(UUID agency) {
 		this.agency = agency;
 	}
-	public String getCitizenship() {
+	public UUID getCitizenship() {
 		return citizenship;
 	}
-	public void setCitizenship(String citizenship) {
+	public void setCitizenship(UUID citizenship) {
 		this.citizenship = citizenship;
 	}
 	public String getClearance() {
@@ -102,10 +120,10 @@ public class AccountDetails {
 		Address2 = address2;
 	}
 	public String getCity() {
-		return City;
+		return city;
 	}
 	public void setCity(String city) {
-		City = city;
+		this.city = city;
 	}
 	public String getState() {
 		return State;
