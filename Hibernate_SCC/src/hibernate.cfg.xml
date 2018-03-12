@@ -12,7 +12,7 @@
 <hibernate-configuration>
     <session-factory>
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/dyn_hibernate</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/brand_new</property>
         <!--  <property name="hibernate.connection.url"></property> -->
         <!--  <property name="hibernate.connection.username"></property> -->
         <!--  <property name="hibernate.connection.password"></property> -->
