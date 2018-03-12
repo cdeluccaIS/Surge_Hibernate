@@ -34,7 +34,7 @@ public class DocumentationDAO {
 	
 	public List<Documentation> getDocumentation(){
 		Session session = SessionUtil.getSession();
-		Query query = session.createQuery("from Account");
+		Query query = session.createQuery("from documentation");
 		List<Documentation> documentation = query.list();
 		session.close();
 		return documentation;
