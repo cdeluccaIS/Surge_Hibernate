@@ -25,7 +25,7 @@ public class ACAS_ARF_MessageDAO {
 		session.save(acasMessage);
 	}
 	
-	public List<ACAS_ARF_Message> getAcasMeta(){
+	public List<ACAS_ARF_Message> getAcasMessage(){
 		Session session = SessionUtil.getSession();
 		Query query = session.createQuery("from acas_arf_message");
 		List<ACAS_ARF_Message> acasMessage = query.list();
@@ -33,7 +33,7 @@ public class ACAS_ARF_MessageDAO {
 		return acasMessage;
 	}
 	
-	public ACAS_ARF_Message updateAcasProdRef(ACAS_ARF_Message acas_message) {
+	public ACAS_ARF_Message updateAcasMessage(ACAS_ARF_Message acas_message) {
 		
 		Session session = SessionUtil.getSession();
 		Transaction tx = session.beginTransaction();
