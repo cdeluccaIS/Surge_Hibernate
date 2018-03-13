@@ -24,7 +24,7 @@ public class ACAS_ARF_ReportObjectDAO {
 		session.save(acasReportObject);
 	}
 	
-	public List<ACAS_ARF_ReportObject> getAcasMeta(){
+	public List<ACAS_ARF_ReportObject> getAcasARFReportObject(){
 		Session session = SessionUtil.getSession();
 		Query query = session.createQuery("from acas_arf_reportobject");
 		List<ACAS_ARF_ReportObject> acasReportObject = query.list();
