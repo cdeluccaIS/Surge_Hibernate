@@ -13,9 +13,6 @@
     <session-factory>
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
         <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/brand_new</property>
-        <!--  <property name="hibernate.connection.url"></property> -->
-        <!--  <property name="hibernate.connection.username"></property> -->
-        <!--  <property name="hibernate.connection.password"></property> -->
         <property name="hibernate.connection.username">theowner</property>
         <property name="hibernate.connection.password">test_pass</property>
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL94Dialect</property>
