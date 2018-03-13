@@ -5,64 +5,64 @@ import org.hibernate.Session;
 import org.hibernate.Query;
 import org.hibernate.Transaction;
 
-public class StateDAO {
+public class CountryDAO {
 	
-	public void addState(State bean) {
+	public void addCountry(Country bean) {
 		Session session = SessionUtil.getSession();
 		Transaction tx = session.beginTransaction();
-		addState(session,bean);
+		addCountry(session,bean);
 		tx.commit();
 		session.close();
 	}
 	
-	private void addState(Session session, State bean) {
-		State state = new State();
+	private void addCountry(Session session, Country bean) {
+		Country country = new Country();
 
-		state.setUuid(bean.getUuid());
-		state.setName(bean.getName());
-		state.setAbbr(bean.getAbbr());
+		country.setUuid(bean.getUuid());
+		country.setName(bean.getName());
+		country.setCode(bean.getCode());
 		
-		session.save(state);
+		session.save(country);
 	}
 	
-	public List<State> getState(){
+	public List<Country> getCountry(){
 		Session session = SessionUtil.getSession();
-		Query query = session.createQuery("from state");
-		List<State> states = query.list();
+		Query query = session.createQuery("from country");
+		List<Country> country = query.list();
 		session.close();
-		return states;
+		return country;
 	}
 	
-	public State updateState(State state) {
+	public Country updateCountry(Country country) {
 		
 		Session session = SessionUtil.getSession();
 		Transaction tx = session.beginTransaction();
-		String hql = "update state set name = :name, abbr = :abbr"
+		String hql = "update country set name = :name, code = :code"
 				+ " WHERE uuid = :uuid";
 		Query query = session.createQuery(hql);
-		query.setParameter("uuid", state.getUuid());
-		query.setString("name", state.getName());
-		query.setString("abbr",state.getAbbr());
+		query.setParameter("uuid", country.getUuid());
+		query.setString("name", country.getName());
+		query.setString("code",country.getCode());
 		
 		int rowCount = query.executeUpdate();
 		System.out.println("Rows affected: " + rowCount);
 		
 		if (rowCount == 0) {
-			addState(state);
+			addCountry(country);
 		}
 		tx.commit();
 		session.close();
-		return state;
+		return country;
 		
 	}
 	
-	public int deleteState(State state) {
+	public int deleteCountry(Country country) {
 		
 		Session session = SessionUtil.getSession();
 		Transaction tx = session.beginTransaction();
-		String hql = "delete from state where uuid = :uuid";
+		String hql = "delete from country where uuid = :uuid";
 		Query query = session.createQuery(hql);
-		query.setParameter("uuid", state.getUuid());
+		query.setParameter("uuid", country.getUuid());
 		
 		int rowCount = query.executeUpdate();
 		System.out.println("Rows affected: " + rowCount);
