@@ -38,7 +38,7 @@ public class ACAS_MetaDAO {
 		
 		Session session = SessionUtil.getSession();
 		Transaction tx = session.beginTransaction();
-		String hql = "update acas_meta set messageID = :messageid, tagValue = :tagvalue, tagName = :tagname"
+		String hql = "update acas_meta set messageid = :messageid, tagvalue = :tagvalue, tagname = :tagname"
 				+ " WHERE uuid = :uuid";
 		Query query = session.createQuery(hql);
 		query.setParameter("uuid", acas_meta.getUuid());
