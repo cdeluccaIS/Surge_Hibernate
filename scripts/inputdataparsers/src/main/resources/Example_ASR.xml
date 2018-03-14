@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsnt:Notify xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsnt="http://docs.oasis-open.org/wsn/b-2" xmlns:wsa="http://w3.org/2005/08/addressing" xmlns:tagged_value="http://metadata.dod.mil/mdr/ns/netops/shared_data/tagged_value/0.41">
+	<wsnt:NotificationMessage>
+		<wsnt:Topic Dialect="http://docs.oasis-open.org/wsn/t-1/TopicExpression/Simple">acas.cve.results</wsnt:Topic>
+		<wsnt:ProducerReference>
+			<wsa:Address>hostname.of.securitycenter.com</wsa:Address>
+			<wsa:Metadata>
+				<wsa:MessageID>hostname.of.securitycenter.com:acas.cve.results::1341</wsa:MessageID>
+				<tagged_value:taggedString value="5.6.1" name="SecurityCenter Data Publisher Version" />
+			</wsa:Metadata>
+		</wsnt:ProducerReference>
+		<wsnt:Message>
+			<summRes:ResultsPackage xmlns:cndc="http://metadata.dod.mil/mdr/ns/netops/net_defense/cnd-core/0.41" xmlns:summRes="http://metadata.dod.mil/mdr/ns/netops/net_defense/summary_res/0.41">
+				<summRes:PopulationCharacteristics populationSize="109464">
+					<summRes:resource>hostname.of.securitycenter.com</summRes:resource>
+				</summRes:PopulationCharacteristics>
+				<summRes:benchmark>
+					<summRes:benchMarkID>
+						<cndc:resource>hostname.of.securitycenter.com</cndc:resource>
+						<cndc:record_identifier>acas.cve.results</cndc:record_identifier>
+					</summRes:benchMarkID>
+					<summRes:ruleResult ruleID="CVE-2000-1200">
+						<summRes:ident>CVE-2000-1200</summRes:ident>
+						<summRes:ruleComplianceItem ruleResult="fail">
+							<summRes:result count="4576"/>
+						</summRes:ruleComplianceItem>
+					</summRes:ruleResult>
+					<summRes:ruleResult ruleID="CVE-2006-1210">
+						<summRes:ident>CVE-2006-1210</summRes:ident>
+						<summRes:ruleComplianceItem ruleResult="fail">
+							<summRes:result count="48626"/>
+						</summRes:ruleComplianceItem>
+					</summRes:ruleResult>
+					<summRes:ruleResult ruleID="CVE-2006-1211">
+						<summRes:ident>CVE-2006-1211</summRes:ident>
+						<summRes:ruleComplianceItem ruleResult="fail">
+							<summRes:result count="63461"/>
+						</summRes:ruleComplianceItem>
+					</summRes:ruleResult>
+					<summRes:ruleResult ruleID="CVE-2006-1212">
+						<summRes:ident>CVE-2006-1212</summRes:ident>
+						<summRes:ruleComplianceItem ruleResult="fail">
+							<summRes:result count="5365"/>
+						</summRes:ruleComplianceItem>
+					</summRes:ruleResult>
+					<summRes:ruleResult ruleID="CVE-2006-1213">
+						<summRes:ident>CVE-2006-1213</summRes:ident>
+						<summRes:ruleComplianceItem ruleResult="fail">
+							<summRes:result count="633"/>
+						</summRes:ruleComplianceItem>
+					</summRes:ruleResult>
+					<summRes:ruleResult ruleID="CVE-2006-1214">
+						<summRes:ident>CVE-2006-1214</summRes:ident>
+						<summRes:ruleComplianceItem ruleResult="fail">
+							<summRes:result count="12356"/>
+						</summRes:ruleComplianceItem>
+					</summRes:ruleResult>
+					<summRes:ruleResult ruleID="CVE-2006-1215">
+						<summRes:ident>CVE-2006-1215</summRes:ident>
+						<summRes:ruleComplianceItem ruleResult="fail">
+							<summRes:result count="61711"/>
+						</summRes:ruleComplianceItem>
+					</summRes:ruleResult>
+					<summRes:ruleResult ruleID="CVE-2017-0050">
+						<summRes:ident>CVE-2017-0050</summRes:ident>
+						<summRes:ruleComplianceItem ruleResult="fail">
+							<summRes:result count="66861"/>
+						</summRes:ruleComplianceItem>
+					</summRes:ruleResult>
+					<summRes:ruleResult ruleID="CVE-2017-0051">
+						<summRes:ident>CVE-2017-0051</summRes:ident>
+						<summRes:ruleComplianceItem ruleResult="fail">
+							<summRes:result count="6100"/>
+					</summRes:ruleComplianceItem>
+					</summRes:ruleResult>
+					<summRes:ruleResult ruleID="CVE-2017-0052">
+						<summRes:ident>CVE-2017-0052</summRes:ident>
+						<summRes:ruleComplianceItem ruleResult="fail">
+							<summRes:result count="6111"/>
+						</summRes:ruleComplianceItem>
+					</summRes:ruleResult>
+				</summRes:benchmark>
+			</summRes:ResultsPackage>
+		</wsnt:Message>
+	</wsnt:NotificationMessage>
+</wsnt:Notify>
