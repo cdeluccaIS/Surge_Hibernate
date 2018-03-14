@@ -5,52 +5,50 @@ import org.hibernate.Session;
 import org.hibernate.Query;
 import org.hibernate.Transaction;
 
-public class ACAS_ASR_RuleResultDAO {
+public class ACAS_ARF_NETINTIDDAO {
 	
-	public void addACAS_ASR_RuleResult(ACAS_ASR_RuleResult bean) {
+	public void addACAS_ARF_NETINTID(ACAS_ARF_NETINTID bean) {
 		Session session = SessionUtil.getSession();
 		Transaction tx = session.beginTransaction();
-		addACAS_ASR_RuleResult(session,bean);
+		addACAS_ARF_NETINTID(session,bean);
 		tx.commit();
 		session.close();
 	}
 	
-	private void addACAS_ASR_RuleResult(Session session, ACAS_ASR_RuleResult bean) {
-		ACAS_ASR_RuleResult object = new ACAS_ASR_RuleResult();
+	private void addACAS_ARF_NETINTID(Session session, ACAS_ARF_NETINTID bean) {
+		ACAS_ARF_NETINTID object = new ACAS_ARF_NETINTID();
 
 		object.setUuid(bean.getUuid());
-		object.setRuleID(bean.getRuleID());
-		object.setIdent(bean.getIdent());
-		object.setRuleComplianceItem(bean.getRuleComplianceItem());
+		object.setId(bean.getId());
+		object.setHostData(bean.getHostData());
 		
 		session.save(object);
 	}
 	
-	public List<ACAS_ASR_RuleResult> getACAS_ASR_RuleResult(){
+	public List<ACAS_ARF_NETINTID> getACAS_ARF_NETINTID(){
 		Session session = SessionUtil.getSession();
-		Query query = session.createQuery("from acas_asr_ruleresult");
-		List<ACAS_ASR_RuleResult> object = query.list();
+		Query query = session.createQuery("from acas_arf_netintid");
+		List<ACAS_ARF_NETINTID> object = query.list();
 		session.close();
 		return object;
 	}
 	
-	public ACAS_ASR_RuleResult updateACAS_ASR_RuleResult(ACAS_ASR_RuleResult object) {
+	public ACAS_ARF_NETINTID updateACAS_ARF_NETINTID(ACAS_ARF_NETINTID object) {
 		
 		Session session = SessionUtil.getSession();
 		Transaction tx = session.beginTransaction();
-		String hql = "update acas_asr_ruleresult set ruleid = :ruleid, ident = :ident, rulecomplianceitem = :rcomp"
+		String hql = "update acas_arf_netintid set id = :id, hostdata = :hdata"
 				+ " WHERE uuid = :uuid";
 		Query query = session.createQuery(hql);
 		query.setParameter("uuid", object.getUuid());
-		query.setParameter("ruleid", object.getRuleID());
-		query.setParameter("ident", object.getIdent());
-		query.setParameter("rcomp", object.getRuleComplianceItem());
+		query.setParameter("id", object.getId());
+		query.setParameter("hdata", object.getHostData());
 		
 		int rowCount = query.executeUpdate();
 		System.out.println("Rows affected: " + rowCount);
 		
 		if (rowCount == 0) {
-			addACAS_ASR_RuleResult(object);
+			addACAS_ARF_NETINTID(object);
 		}
 		tx.commit();
 		session.close();
@@ -58,11 +56,11 @@ public class ACAS_ASR_RuleResultDAO {
 		
 	}
 	
-	public int deleteACAS_ASR_RuleResult(ACAS_ASR_RuleResult object) {
+	public int deleteACAS_ARF_NETINTID(ACAS_ARF_NETINTID object) {
 		
 		Session session = SessionUtil.getSession();
 		Transaction tx = session.beginTransaction();
-		String hql = "delete from acas_asr_ruleresult where uuid = :uuid";
+		String hql = "delete from acas_arf_netintid where uuid = :uuid";
 		Query query = session.createQuery(hql);
 		query.setParameter("uuid", object.getUuid());
 		
