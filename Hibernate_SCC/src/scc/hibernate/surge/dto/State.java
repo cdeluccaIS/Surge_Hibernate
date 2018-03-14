@@ -15,6 +15,12 @@ public class State {
 	private String name = "--";
 	@Column(name="abbr", columnDefinition="char(2)")
 	private String abbr = "XX";
+	public State(){
+	}
+	public State(String name, String abbr){
+		this.name = name;
+		this.abbr = abbr;
+	}
 	public UUID getUuid() {
 		return uuid;
 	}
