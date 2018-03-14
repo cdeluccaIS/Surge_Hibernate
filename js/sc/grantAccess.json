@@ -1,0 +1,10 @@
+{
+    "userLogin": [{
+        "username":"jmorris",
+        "password":"password123",
+            "acctType":[{
+                "type":"user"
+                }]
+        
+    }]
+}
