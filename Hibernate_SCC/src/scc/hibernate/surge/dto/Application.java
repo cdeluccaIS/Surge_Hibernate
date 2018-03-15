@@ -2,9 +2,13 @@ package scc.hibernate.surge.dto;
 
 import java.util.Date;
 import java.util.UUID;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -12,7 +16,7 @@ import javax.persistence.TemporalType;
 public class Application {
 	@Id
 	@Column (name="uuid")
-	private UUID uuid;
+    private UUID uuid;
 	@Column (name="timeZone")
     private String timeZone;
 	@Column (name="sysTime")
@@ -26,8 +30,9 @@ public class Application {
     private Date releaseDate;
     @Column (name="os")
     private String os;
-    @Column (name="notice")
-    private UUID notice = UUID.fromString("00000000-0000-0000-0000-000000000000");
+    @ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+    @JoinColumn(name="notice")
+    private ApplicationNotices notice;	//UUID.fromString("00000000-0000-0000-0000-000000000000");
     @Column (name="ldap_name")
     private String ldap_name = "--";
     @Column (name="ldap_URL")
@@ -41,7 +46,27 @@ public class Application {
     @Column (name="ldap_port")
     private String ldap_port = "--";
     
-
+    public Application(){
+    	
+    }
+    public Application(String timeZone, String sysTime, String version, String build, Date releaseDate,
+    		ApplicationNotices notice, String ldap_name, String ldap_URL, String ldap_bindDN, String ldap_bindPass,
+    		String os, String ldap_rootDN, String ldap_port){
+    	this.timeZone = timeZone;
+    	this.sysTime = sysTime;
+    	this.version = version;
+    	this.build = build;
+    	this.releaseDate = releaseDate;
+    	this.os = os;
+    	this.notice = notice;
+    	this.ldap_name = ldap_name;
+    	this.ldap_URL = ldap_URL;
+    	this.ldap_bindDN = ldap_bindDN;
+    	this.ldap_bindPass = ldap_bindPass;
+    	this.ldap_rootDN = ldap_rootDN;
+    	this.ldap_port = ldap_port;
+    }
+    
 	public UUID getUuid() {
 		return uuid;
 	}
@@ -84,10 +109,10 @@ public class Application {
 	public void setOs(String os) {
 		this.os = os;
 	}
-	public UUID getNotice() {
+	public ApplicationNotices getNotice() {
 		return notice;
 	}
-	public void setNotice(UUID notice) {
+	public void setNotice(ApplicationNotices notice) {
 		this.notice = notice;
 	}
 	public String getLdap_name() {
