@@ -20,7 +20,7 @@ public class CountryDAO {
 
 		country.setUuid(bean.getUuid());
 		country.setName(bean.getName());
-		country.setCode(bean.getCode());
+		country.setAbbr(bean.getAbbr());
 		
 		session.save(country);
 	}
@@ -37,12 +37,12 @@ public class CountryDAO {
 		
 		Session session = SessionUtil.getSession();
 		Transaction tx = session.beginTransaction();
-		String hql = "update country set name = :name, code = :code"
+		String hql = "update country set name = :name, abbr = :abbr"
 				+ " WHERE uuid = :uuid";
 		Query query = session.createQuery(hql);
 		query.setParameter("uuid", country.getUuid());
 		query.setString("name", country.getName());
-		query.setString("code",country.getCode());
+		query.setString("abbr",country.getAbbr());
 		
 		int rowCount = query.executeUpdate();
 		System.out.println("Rows affected: " + rowCount);

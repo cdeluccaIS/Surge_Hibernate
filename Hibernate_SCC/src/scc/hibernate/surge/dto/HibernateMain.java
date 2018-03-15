@@ -4,6 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
+import java.util.concurrent.TimeUnit;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -49,6 +50,11 @@ public class HibernateMain {
 			AccountDetails data = (AccountDetails) inDB.get(i);
 			System.out.print("Name: " + data.getFirstName());
 			System.out.print(" " + data.getLastName() + " " + "UUID: " + data.getUuid() + "\n");
+		}
+		
+		for (int i=0; i < 5; i++) {
+			UUID uuid = UUIDgenerator.Generate();
+			System.out.println(uuid);
 		}
 	}
 		
