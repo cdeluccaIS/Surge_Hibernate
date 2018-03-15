@@ -11,8 +11,8 @@ public class Country {
 	@Id
 	private UUID uuid;
 	private String name = "--";
-	@Column(name="code", columnDefinition="char(3)")
-	private String code = "---";
+	@Column(name="abbr", columnDefinition="char(3)")
+	private String abbr = "---";
 	
 	public UUID getUuid() {
 		return uuid;
@@ -26,11 +26,11 @@ public class Country {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getCode() {
-		return code;
+	public String getAbbr() {
+		return abbr;
 	}
-	public void setCode(String code) {
-		this.code = code;
+	public void setAbbr(String abbr) {
+		this.abbr = abbr;
 	}
 	
 }
