@@ -1,8 +1,12 @@
 package scc.hibernate.surge.dto;
 import java.util.UUID;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 
 @Entity (name="ACAS_ARF_NETINTID")
 public class ACAS_ARF_NETINTID{
@@ -11,8 +15,10 @@ public class ACAS_ARF_NETINTID{
 	private UUID uuid;
 	@Column (name="id")
 	private String id;
-	@Column (name="hostData")
-	private UUID hostData;
+	@OneToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+	@JoinColumn(name="hostData")
+	private ACAS_ARF_HOSTDATA hostData;
+	
 	public UUID getUuid() {
 		return uuid;
 	}
@@ -25,10 +31,10 @@ public class ACAS_ARF_NETINTID{
 	public void setId(String id) {
 		this.id = id;
 	}
-	public UUID getHostData() {
+	public ACAS_ARF_HOSTDATA getHostData() {
 		return hostData;
 	}
-	public void setHostData(UUID hostData) {
+	public void setHostData(ACAS_ARF_HOSTDATA hostData) {
 		this.hostData = hostData;
 	}
 }
