@@ -1,9 +1,13 @@
 package scc.hibernate.surge.dto;
 
 import java.util.UUID;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity (name="ACAS_ProdRef")
 public class ACAS_ProdRef {
@@ -16,8 +20,10 @@ public class ACAS_ProdRef {
 	private String topic_dialect;
 	@Column (name="address")
 	private String address;
-	@Column (name="meta")
-	private UUID meta;
+	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+	@JoinColumn(name="meta")
+	private ACAS_Meta meta;
+	
 	public UUID getUuid() {
 		return uuid;
 	}
@@ -42,10 +48,10 @@ public class ACAS_ProdRef {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public UUID getMeta() {
+	public ACAS_Meta getMeta() {
 		return meta;
 	}
-	public void setMeta(UUID meta) {
+	public void setMeta(ACAS_Meta meta) {
 		this.meta = meta;
 	}
 	
