@@ -1,9 +1,13 @@
 package scc.hibernate.surge.dto;
 
 import java.util.UUID;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity (name="ACAS_ASR_RuleResult")
 public class ACAS_ASR_RuleResult{
@@ -12,10 +16,13 @@ public class ACAS_ASR_RuleResult{
 	private UUID uuid;
 	@Column (name="ruleID")
 	private String ruleID;
-	@Column (name="ident")
-	private UUID ident;
-	@Column (name="ruleComplianceItem")
-	private UUID ruleComplianceItem;
+	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+	@JoinColumn(name="ident")
+	private ACAS_ASR_Ident ident;
+	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+	@JoinColumn(name="ruleComplianceItem")
+	private ACAS_ASR_RuleComplianceItem ruleComplianceItem;
+	
 	public UUID getUuid() {
 		return uuid;
 	}
@@ -28,16 +35,16 @@ public class ACAS_ASR_RuleResult{
 	public void setRuleID(String ruleID) {
 		this.ruleID = ruleID;
 	}
-	public UUID getIdent() {
+	public ACAS_ASR_Ident getIdent() {
 		return ident;
 	}
-	public void setIdent(UUID ident) {
+	public void setIdent(ACAS_ASR_Ident ident) {
 		this.ident = ident;
 	}
-	public UUID getRuleComplianceItem() {
+	public ACAS_ASR_RuleComplianceItem getRuleComplianceItem() {
 		return ruleComplianceItem;
 	}
-	public void setRuleComplianceItem(UUID ruleComplianceItem) {
+	public void setRuleComplianceItem(ACAS_ASR_RuleComplianceItem ruleComplianceItem) {
 		this.ruleComplianceItem = ruleComplianceItem;
 	}
 }
