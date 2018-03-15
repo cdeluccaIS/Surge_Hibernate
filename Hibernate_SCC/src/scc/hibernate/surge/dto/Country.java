@@ -13,7 +13,13 @@ public class Country {
 	private String name = "--";
 	@Column(name="abbr", columnDefinition="char(3)")
 	private String abbr = "---";
-	
+  
+	public Country(){}
+	public Country(String name, String abbr){
+		this.name = name;
+		this.abbr = abbr;
+	}
+
 	public UUID getUuid() {
 		return uuid;
 	}
@@ -32,5 +38,7 @@ public class Country {
 	public void setAbbr(String abbr) {
 		this.abbr = abbr;
 	}
-	
+	public void setAbbr(String abbr) {
+		this.abbr = abbr;
+	}	
 }

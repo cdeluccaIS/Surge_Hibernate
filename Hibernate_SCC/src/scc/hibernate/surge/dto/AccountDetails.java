@@ -1,15 +1,19 @@
 package scc.hibernate.surge.dto;
 
 import java.util.UUID;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne; 
 
 @Entity (name="Account")
 public class AccountDetails {
 	@Id
 	@Column (name="uuid")
-	private UUID uuid;
+    private UUID uuid;
 	@Column (name="firstName")
     private String firstName;
 	@Column (name="middleInitial")
@@ -22,10 +26,12 @@ public class AccountDetails {
     private String securePhone;
 	@Column (name="uSecurePhone")
     private String uSecurePhone = "--";
-	@Column (name="agency")
-    private UUID agency;
-	@Column (name="citizenship")
-    private UUID citizenship;
+	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+    	@JoinColumn(name="agency")
+    private Agencies agency;
+	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+	@JoinColumn(name="citizenship")
+    private Country citizenship;
 	@Column (name="clearance")
     private String clearance;
 	@Column (name="Address1")
@@ -34,8 +40,9 @@ public class AccountDetails {
     private String Address2 = "--";
 	@Column (name="City")
     private String city = "--";
-	@Column (name="State")
-    private String State = "--";
+	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+	@JoinColumn(name="state")
+    private State state = "--";
 	@Column (name="ZipCode")
     private int ZipCode = 12345;
 	@Column (name="accountType")
@@ -46,7 +53,8 @@ public class AccountDetails {
     private String password;
 	@Column (name="lock")
     private boolean lock;
-
+	public AccountDetails(){
+	}
 	public UUID getUuid() {
 		return uuid;
 	}
@@ -89,16 +97,16 @@ public class AccountDetails {
 	public void setuSecurePhone(String uSecurePhone) {
 		this.uSecurePhone = uSecurePhone;
 	}
-	public UUID getAgency() {
+	public Agencies getAgency() {
 		return agency;
 	}
-	public void setAgency(UUID agency) {
+	public void setAgency(Agencies agency) {
 		this.agency = agency;
 	}
-	public UUID getCitizenship() {
+	public Country getCitizenship() {
 		return citizenship;
 	}
-	public void setCitizenship(UUID citizenship) {
+	public void setCitizenship(Country citizenship) {
 		this.citizenship = citizenship;
 	}
 	public String getClearance() {
@@ -125,11 +133,11 @@ public class AccountDetails {
 	public void setCity(String city) {
 		this.city = city;
 	}
-	public String getState() {
+	public State getState() {
 		return State;
 	}
-	public void setState(String state) {
-		State = state;
+	public void setState(State state) {
+		this.state = state;
 	}
 	public int getZipCode() {
 		return ZipCode;

@@ -17,6 +17,14 @@ public class ApplicationNotices {
 	private String notice ;
 	@Column (name="datetime")
 	private Date datetime;
+	public ApplicationNotices(){
+		
+	}
+	public ApplicationNotices(String name, String notice, Date datetime){
+		this.name = name;
+		this.notice = notice;
+		this.datetime = datetime;
+	}
 	
 	public UUID getUuid() {
 		return uuid;

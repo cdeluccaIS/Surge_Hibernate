@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--scc main header-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>SCC Admin Home Page</title>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="js/custom.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+    </head>
+    <body>
+        <div id="container">
+            <div id="sccHeader">
+                <div id="sccHeaderContent">
+                    <div class="logo">
+                        <a href="#" target="_parent">
+                            <img src="images/scc.png" alt="SCC Logo" width="120" height="110" border="0">
+                        </a>
+                    </div>
+                    <div id="logoText">
+                        <p>Security Coordination Center</p>
+                    </div>
+                    <div id="sccMainNav">
+                        <ul>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+                    <div id="sccSecondNav">
+                        <ul>
+                            <li><a href="#" >User: TestUsername</a></li>
+                            <li><a href="#" >Log Off</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="sccNav">
+                <ul class="nav nav-pills nav-fill">
+                    <li class="nav-item">    
+                        <a class="nav-link active" href="admin_home_page.html">Home</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-item nav-link" href="admin_upload.html">Upload</a></li>
+                    <li class="nav-item"><a class="nav-item nav-link" href="admin_dataIngest.html">Data Ingest Process</a></li>
+                    <li class="nav-item"><a class="nav-item nav-link" href="admin_user_management.html">User Management</a></li>
+                    <li class="nav-item"><a class="nav-item nav-link" href="admin_documentation.html">Documentation</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">General Settings</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="admin_gen_settings.html">Application Setting</a>
+                            <a class="dropdown-item" href="admin_user_management.html">User Management</a>
+                            <a class="dropdown-item" href="#">Security Settings</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Another link</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="content">
+                <!--content wrapper-->
+                <div id="contentWrapper">
+                    <div class="container" style="padding-top:75px;">
+                        <div class="row">
+                         <div class="my-3 p-3 bg-white rounded box-shadow">
+                            <div class="media text-muted pt-3">
+                                <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                                    <a class="btn btn-primary btn-sccgray btn-lg btn-block" href="admin_user_management.html" data-toggle="tooltip" data-placement="right" data-html="true" 
+                                       title="<em><b>User Management:</b></em> application functions used to manage user accounts">
+                                    User Management</a>
+                              </div>
+                            </div>
+                            <div class="media text-muted pt-3">
+                                <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                                    <a class="btn btn-primary btn-sccgray btn-lg btn-block" href="admin_dataIngest.html" data-toggle="tooltip" data-placement="right" data-html="true" 
+                                       title="<em><b>Data ingest process:</b></em> application functions used to manage user accounts">Data ingest Process</a>
+                              </div>
+                            </div>
+                            <div class="media text-muted pt-3">
+                                <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                                    <a class="btn btn-primary btn-sccgray btn-lg btn-block" href="admin_documentation.html" data-toggle="tooltip" data-placement="right" data-html="true" 
+                                       title="<em><b>Ducumentation:</b></em> application functions used to manage user accounts">Documentation</a>
+                              </div>
+                            </div>
+                             <div class="media text-muted pt-3">
+                                <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                                    <a class="btn btn-primary btn-sccgray btn-lg btn-block" href="admin_security_settings.html" data-toggle="tooltip" data-placement="right" data-html="true" 
+                                       title="<em><b>Security Settings:</b></em> application functions used to manage user accounts">Security Settings</a>
+                              </div>
+                            </div>
+                             <div class="media text-muted pt-3">
+                                <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                                    <a class="btn btn-primary btn-sccgray btn-lg btn-block" href="admin_gen_settings.html" data-toggle="tooltip" data-placement="right" data-html="true" 
+                                       title="<em><b>General Settings:</b></em> application functions used to manage user accounts">General Setting</a>
+                              </div>
+                            </div>
+                             <div class="media text-muted pt-3">
+                                <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                                    <a class="btn btn-primary btn-sccgray btn-lg btn-block" href="#" data-toggle="tooltip" data-placement="right" data-html="true" 
+                                       title="<em><b>Application Settings:w:w:</b></em> application functions used to manage user accounts">Application Setting</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+               </div>
+            </div>
+            <footer class="my-5 pt-5 text-muted text-center text-small">
+                <p class="mb-1">© 2018 SCC Management System</p>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#">SCC Website </a></li>|
+                    <li class="list-inline-item"><a href="#">Contact </a></li>|
+                    <li class="list-inline-item"><a href="#">About </a></li>
+                </ul>
+            </footer>
+        </div><!--end of container-->		
+    </body>
+</html>
