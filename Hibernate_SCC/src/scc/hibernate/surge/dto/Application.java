@@ -26,7 +26,7 @@ public class Application {
 	@Column (name="build")
     private String build;
     @Column (name="releaseDate")
-    @Temporal(TemporalType.TIMESTAMP)
+    @Temporal(TemporalType.DATE)
     private Date releaseDate;
     @Column (name="os")
     private String os;
