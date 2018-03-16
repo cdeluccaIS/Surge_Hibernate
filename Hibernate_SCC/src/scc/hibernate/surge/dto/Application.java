@@ -46,27 +46,6 @@ public class Application {
     @Column (name="ldap_port")
     private String ldap_port = "--";
     
-    public Application(){
-    	
-    }
-    public Application(String timeZone, String sysTime, String version, String build, Date releaseDate,
-    		ApplicationNotices notice, String ldap_name, String ldap_URL, String ldap_bindDN, String ldap_bindPass,
-    		String os, String ldap_rootDN, String ldap_port){
-    	this.timeZone = timeZone;
-    	this.sysTime = sysTime;
-    	this.version = version;
-    	this.build = build;
-    	this.releaseDate = releaseDate;
-    	this.os = os;
-    	this.notice = notice;
-    	this.ldap_name = ldap_name;
-    	this.ldap_URL = ldap_URL;
-    	this.ldap_bindDN = ldap_bindDN;
-    	this.ldap_bindPass = ldap_bindPass;
-    	this.ldap_rootDN = ldap_rootDN;
-    	this.ldap_port = ldap_port;
-    }
-    
 	public UUID getUuid() {
 		return uuid;
 	}
