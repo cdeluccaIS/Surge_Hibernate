@@ -1,19 +1,25 @@
 package scc.hibernate.surge.dto;
 
 import java.util.UUID;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity (name="ACAS_ARF_Message")
 public class ACAS_ARF_Message {
 	@Id
 	@Column (name="uuid")
 	private UUID uuid;
-	@Column (name="prodRef")
-	private UUID prodRef;
-	@Column (name="ar")
-	private UUID ar;
+	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+	@JoinColumn(name="prodRef")
+	private ACAS_ProdRef prodRef;
+	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+	@JoinColumn(name="ar")
+	private ACAS_ARF_AR ar;
 	
 	public UUID getUuid() {
 		return uuid;
@@ -21,16 +27,16 @@ public class ACAS_ARF_Message {
 	public void setUuid(UUID uuid) {
 		this.uuid = uuid;
 	}
-	public UUID getProdRef() {
+	public ACAS_ProdRef getProdRef() {
 		return prodRef;
 	}
-	public void setProdRef(UUID prodRef) {
+	public void setProdRef(ACAS_ProdRef prodRef) {
 		this.prodRef = prodRef;
 	}
-	public UUID getAr() {
+	public ACAS_ARF_AR getAr() {
 		return ar;
 	}
-	public void setAr(UUID ar) {
+	public void setAr(ACAS_ARF_AR ar) {
 		this.ar = ar;
 	}
 	

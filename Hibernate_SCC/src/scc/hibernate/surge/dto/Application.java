@@ -2,9 +2,13 @@ package scc.hibernate.surge.dto;
 
 import java.util.Date;
 import java.util.UUID;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -12,7 +16,7 @@ import javax.persistence.TemporalType;
 public class Application {
 	@Id
 	@Column (name="uuid")
-	private UUID uuid;
+    private UUID uuid;
 	@Column (name="timeZone")
     private String timeZone;
 	@Column (name="sysTime")
@@ -22,12 +26,13 @@ public class Application {
 	@Column (name="build")
     private String build;
     @Column (name="releaseDate")
-    @Temporal(TemporalType.TIMESTAMP)
+    @Temporal(TemporalType.DATE)
     private Date releaseDate;
     @Column (name="os")
     private String os;
-    @Column (name="notice")
-    private UUID notice = UUID.fromString("00000000-0000-0000-0000-000000000000");
+    @ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+    @JoinColumn(name="notice")
+    private ApplicationNotices notice;	//UUID.fromString("00000000-0000-0000-0000-000000000000");
     @Column (name="ldap_name")
     private String ldap_name = "--";
     @Column (name="ldap_URL")
@@ -41,7 +46,6 @@ public class Application {
     @Column (name="ldap_port")
     private String ldap_port = "--";
     
-
 	public UUID getUuid() {
 		return uuid;
 	}
@@ -84,10 +88,10 @@ public class Application {
 	public void setOs(String os) {
 		this.os = os;
 	}
-	public UUID getNotice() {
+	public ApplicationNotices getNotice() {
 		return notice;
 	}
-	public void setNotice(UUID notice) {
+	public void setNotice(ApplicationNotices notice) {
 		this.notice = notice;
 	}
 	public String getLdap_name() {

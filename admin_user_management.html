@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--scc main header-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>SCC Admin Home Page</title>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="js/custom.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+    </head>
+    <body>
+        <div id="container">
+            <div id="sccHeader">
+                <div id="sccHeaderContent">
+                    <div class="logo">
+                        <a href="#" target="_parent">
+                            <img src="images/scc.png" alt="SCC Logo" width="120" height="110" border="0">
+                        </a>
+                    </div>
+                    <div id="logoText">
+                        <p>Security Coordination Center</p>
+                    </div>
+                    <div id="sccMainNav">
+                        <ul>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+                    <div id="sccSecondNav">
+                        <ul>
+                            <li><a href="#" >User: TestUsername</a></li>
+                            <li><a href="#" >Log Off</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="sccNav">
+                <ul class="nav nav-pills nav-fill">
+                    <li class="nav-item">    
+                        <a class="nav-link" href="admin_home_page.html">Home</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-item nav-link" href="admin_upload.html">Upload</a></li>
+                    <li class="nav-item"><a class="nav-item nav-link" href="admin_dataIngest.html">Data Ingest Process</a></li>
+                    <li class="nav-item"><a class="nav-item nav-link active" href="admin_user_management.html">User Management</a></li>
+                    <li class="nav-item"><a class="nav-item nav-link" href="admin_documentation.html">Documentation</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">General Settings</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="admin_gen_settings.html">Application Setting</a>
+                            <a class="dropdown-item" href="admin_user_management.html">User Management</a>
+                            <a class="dropdown-item" href="#">Security Settings</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Another link</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="content">
+                <!--content wrapper-->
+                <div class="container" style="padding-top:75px; max-width: 1500px;">
+                    <div class="row">
+                        <div class="col-md-2 order-md-1">
+                            <a href="#"><h3 class="text-primary">Selected:
+                                </h3>
+                            </a>
+                            <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                                <a class="btn btn-primary btn-sccblue btn-sm btn-block" href="#" data-placement="right" data-html="true"
+                                   title="Accept User Request" data-toggle="modal" data-target="#approveModalCenter">
+                                    Accept User Request</a>
+                            </div>
+                            <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                                <a class="btn btn-warning btn-sccgold btn-sm btn-block" href="#" data-placement="right" data-html="true"
+                                   title="Lock User" data-toggle="modal" data-target="#suspendModalCenter">
+                                    Suspend/Ban User</a>
+                            </div>
+                            <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                                <a class="btn btn-danger btn-sm btn-block" href="admin_add_user.html" data-placement="right" data-html="true" 
+                                   title="Delete User" data-toggle="modal" data-target="#deleteModalCenter">Delete User</a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-8 order-md-2">
+                            <a href="#"><h3 class="text-primary">User Management?
+                                </h3>
+                            </a>
+                            <div class="row border">
+                                <div class="col-md-2 order-md-1 border">
+                                    <input type="checkbox" />
+                                </div>
+                                <div class="col-md-8 order-md-2 border">
+                                    <h3 class="text-center"> User Name</h3>
+                                </div>
+                                <div class="col-md-2 order-md-3 border">
+                                    <h3 class="text-center">Status</h3>
+                                </div>
+                            </div>
+
+                            <div class="row border">
+                                <div class="col-md-2 order-md-1 border">
+                                    <input class="usercheck" type="checkbox" id="blankCheckbox" value="James2131" aria-label="...">
+                                </div>
+                                <div class="col-md-8 order-md-2 border">
+                                    <h3 class="text-center"> James2131</h3>
+                                </div>
+                                <div class="col-md-2 order-md-3 border">
+                                    <h3 class="text-center">Status Icon</h3>
+                                </div>
+                            </div>
+                            <div class="row border">
+                                <div class="col-md-2 order-md-1 border">
+                                    <!--<input type="checkbox"  />-->
+                                </div>
+                                <div class="col-md-8 order-md-2 border">
+                                    <div class="row">
+                                        <div class="col-md-6 order-md-2"></div>
+                                        <div class="col-md-6 order-md-2"><h3 class="text-primary">Office Information</h3></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 order-md-2">
+                                            <form class="needs-validation" novalidate>
+                                                <div class="form-row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="validationTooltip01">First name</label>
+                                                        <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="Mark" required>
+                                                        <div class="valid-tooltip">
+                                                            Looks good!
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 mb-3">
+                                                        <label for="validationTooltip02">MI</label>
+                                                        <input type="text" class="form-control" id="validationTooltip02" placeholder="MI" value="Otto" required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-md-10 mb-3">
+                                                        <label for="validationTooltip01">Last name</label>
+                                                        <input type="text" class="form-control" id="validationTooltip03" placeholder="Last name" value="Mark" required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-md-10 mb-3">
+                                                        <label for="validationTooltip01">Agency</label>
+                                                        <input type="text" class="form-control" id="validationTooltip04" placeholder="Agency">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-md-10 mb-3">
+                                                        <label for="validationTooltip01">Email</label>
+                                                        <input type="email" class="form-control" id="validationTooltip04" placeholder="Email">
+                                                        <div class="valid-tooltip">
+                                                            Looks good!
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-md-10 mb-3">
+                                                        <label for="validationTooltip01">Secure Phone Number</label>
+                                                        <input type="text" class="form-control" id="validationTooltip05" placeholder="Secure Phone Number">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-md-10 mb-3">
+                                                        <label for="validationTooltip01">Unsecure Phone Number</label>
+                                                        <input type="text" class="form-control" id="validationTooltip06" placeholder="Unsecure Phone Number">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-md-10 mb-3">
+                                                        <label for="validationTooltip01">Country of Citizenship</label>
+                                                        <input type="text" class="form-control" id="validationTooltip07" placeholder="Country of Citizenship">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col-md-10 mb-3">
+                                                        <label for="validationTooltip01">Security Clearance</label>
+                                                        <input type="text" class="form-control" id="validationTooltip08" placeholder="Security Clearance">
+                                                    </div>
+                                                </div>
+
+                                        </div>
+                                        <div class="col-md-6 order-md-2">
+                                            <div class="form-row">
+                                                <div class="col-md-12 mb-3">
+                                                    <label for="validationTooltip01">Address Line One</label>
+                                                    <input type="text" class="form-control" id="validationTooltip01" placeholder="Address Line One">
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col-md-12 mb-3">
+                                                    <label for="validationTooltip01">Address Line Two</label>
+                                                    <input type="text" class="form-control" id="validationTooltip02" placeholder="Address Line Two">
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col-md-5 mb-3">
+                                                    <label for="validationTooltip01">City</label>
+                                                    <input type="text" class="form-control" id="validationTooltip01" placeholder="City">
+                                                </div>
+                                                <div class="col-md-3 mb-3">
+                                                    <label for="validationTooltip02">State</label>
+                                                    <input type="text" class="form-control" id="validationTooltip02" placeholder="State">
+                                                </div>
+                                                <div class="col-md-4 mb-3">
+                                                    <label for="validationTooltip02">Zip</label>
+                                                    <input type="text" class="form-control" id="validationTooltip02" placeholder="Zip">
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col-md-12 mb-3">
+                                                    <label for="validationTooltip01">Secure Phone </label>
+                                                    <input type="text" class="form-control" id="validationTooltip05" placeholder="Secure Phone ">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row">
+                                                <div class="col-md-10 mb-3">
+                                                    <label for="validationTooltip01">Email</label>
+                                                    <input type="email" class="form-control" id="validationTooltip04" placeholder="Email">
+                                                </div>
+                                            </div>
+                                            <!--<button class="btn btn-primary " data-toggle="modal" data-target="#dangerModalCenter" type="submit">Save</button>-->
+                                            <a class="btn btn-primary" href="#" data-placement="right" data-html="true" 
+                                               title="Save Users">Save</a>
+
+                                            <button type="button" class="btn btn-secondary">Cancel</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 order-md-3 border">
+                                   <img src="images/icons/SCC_Active_icon.png" width="32" height="37">
+                                    <img src="images/icons/SCC_Admin_icon.png" width="32" height="32">
+                                </div>
+                            </div>
+                            <div class="row border">
+                                <table class="table table-striped">
+                                    <tr class="border">
+                                        <td class="col-md-2 order-md-1 border">
+                                            <input class="usercheck" type="checkbox" id="blankCheckbox" value="Diana0684" aria-label="..." ></td>
+                                        <td style="text-align: center;">Diana0684</td>
+                                        <td class="col-md-2 order-md-1 border"></td>
+                                    </tr>
+                                    <tr class="border">
+                                        <td class="col-md-2 order-md-1 border"><input class="usercheck" type="checkbox" id="blankCheckbox" value="Jim1982" aria-label="..."></td>
+                                        <td style="text-align: center;">Jim1982</td>
+                                        <td class="col-md-2 order-md-1 border"></td>
+                                    </tr>
+                                    <tr class="border">
+                                        <td class="col-md-2 order-md-1 border"><input class="usercheck" type="checkbox" id="blankCheckbox" value="Shawn2922" aria-label="..."></td>
+                                        <td style="text-align: center;">Shawn2922</td>
+                                        <td class="col-md-2 order-md-1 border"></td>
+                                    </tr>
+                                    <tr class="border">
+                                        <td class="col-md-2 order-md-1 border"><input class="usercheck" type="checkbox" id="blankCheckbox" value="Roger2123" aria-label="..."></td>
+                                        <td style="text-align: center;">Roger2123</td>
+                                        <td class="col-md-2 order-md-1 border"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-2 order-md-3">
+                            <h3> Other Status Indicators</h3>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img src="images/icons/SCC_Active_icon.png" width="32" height="37">
+                                        <span class="text-center">Active</span>
+
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="images/icons/SCC_NotActive_icon.png" width="32" height="37">
+                                        <span class="text-center">Not Active</span>
+
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="images/icons/SCC_Pending_icon.png" width="32" height="37">
+                                        <span class="text-center">Pending</span>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <img src="images/icons/SCC_User_icon.png" width="32" height="32">
+                                        <span class="text-center">User</span>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <img src="images/icons/SCC_Admin_icon.png" width="32" height="32">
+                                        <span class="text-center">Admin</span>
+
+                                    </td>
+
+                                </tr>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="my-5 pt-5 text-muted text-center text-small">
+                <p class="mb-1">© 2018 SCC Management System</p>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#">SCC Website </a></li>|
+                    <li class="list-inline-item"><a href="#">Contact </a></li>|
+                    <li class="list-inline-item"><a href="#">About </a></li>
+                </ul>
+            </footer>
+        </div><!--end of container-->
+        <!--modal delete user-->
+        <div class="modal fade" id="deleteModalCenter" tabindex="-1" role="dialog" aria-labelledby="deleteModalCenter" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content scc-border-default">
+                    <div class="modal-header scc-backgound-default">
+                        <h5 class="modal-title" id="ModalLongTitle">Confirm Action on Selected User(s)</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Are you sure you want to delete user(s)?
+                        <ul id="selectedUsersForDelete">
+                        </ul>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary btn-sm">Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="dangerModalCenter" tabindex="-1" role="dialog" aria-labelledby="dangerModalCenter" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content scc-border-danger">
+                    <div class="modal-header scc-backgound-danger">
+                        <h5 class="modal-title" id="ModalLongTitle">Warning: One or more selected User(s) is already approved.</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        The user(s) Diana684,Jim1983 are already approved and cannot be approved a second time.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Continue</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--modal suspend user-->
+        <div class="modal fade" id="suspendModalCenter" tabindex="-1" role="dialog" aria-labelledby="suspendModalCenter" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content scc-border-default">
+                    <div class="modal-header scc-backgound-default">
+                        <h5 class="modal-title" id="ModalLongTitle">Suspend the following user(s)</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form action="#" name="suspendUser" id="suspendUser">
+                        <div class="modal-body">
+                            The following action will suspend the following user(s) to revoke access to the system. <br>
+                            Do you wish to confirm this action for ? <br>
+                            <ul id="selectedUsers">
+                            </ul>
+                            Please provide justification of suspension of selected user accounts in the text box below <b>(Required)</b> 
+                            <textarea rows="3" cols="40" id="justification" name="justification"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm">Confirm</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="validateJustification" tabindex="-1" role="dialog" aria-labelledby="validateJustification" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content scc-border-danger">
+                    <div class="modal-header scc-backgound-danger">
+                        <h5 class="modal-title" id="ModalLongTitle">Cannot complete action.<br>NO ENTRIES RECORDED.</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Justification must be provided in order to continue the action to suspend the user. <br>
+                        Please provide those details before continue.
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Continue</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--modal suspend user-->
+        <div class="modal fade" id="approveModalCenter" tabindex="-1" role="dialog" aria-labelledby="approveModalCenter" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content scc-border-default">
+                    <div class="modal-header scc-backgound-default">
+                        <h5 class="modal-title" id="ModalLongTitle">Approve Pending User(s)?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form action="#" name="approvedUser" id="approveUser">
+                        <div class="modal-body">
+                            The following action will approve the following user(s) to access the system. <br>
+                            Do you wish to confirm this action for ? <br>
+                            <ul id="selectedUsersForApproval">
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm">Confirm</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="isApproved" tabindex="-1" role="dialog" aria-labelledby="isApproved" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content scc-border-danger">
+                    <div class="modal-header scc-backgound-danger">
+                        <h5 class="modal-title" id="ModalLongTitle">Warning : <br>One or More Selected User(s) are Already Approved.</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        One or more selected User(s) is already approved <br>
+                        and cannot be approved a second time.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Continue</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+
+

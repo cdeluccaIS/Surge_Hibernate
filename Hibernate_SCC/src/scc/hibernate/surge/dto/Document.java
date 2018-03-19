@@ -12,6 +12,12 @@ public class Document {
 	private UUID uuid;
 	@Column (name="location")
 	private String location;
+	
+	public Document(){
+	}
+	public Document(String location){
+		this.location = location;
+	}
 	public UUID getUuid() {
 		return uuid;
 	}

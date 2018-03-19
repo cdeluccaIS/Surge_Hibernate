@@ -2,9 +2,12 @@ package scc.hibernate.surge.dto;
 
 import java.util.UUID;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity (name="Location")
 public class Location {
@@ -21,11 +24,23 @@ public class Location {
 	private String address2 = "--";
 	@Column (name="city")
 	private String city = "--";
-	@Column (name="state")
-	private UUID state;
+	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+    	@JoinColumn(name="state")
+	private State state;
 	@Column (name="zip_code")
 	private int zip_code;
 	
+	public Location(){
+	}
+	public Location(String locName, String locId, String addr1, String addr2, String city, State state, int zipCode){
+		this.location_name = locName;
+		this.location_id = locId;
+		this.address1 = addr1;
+		this.address2 = addr2;
+		this.city = city;
+		this.state = state;
+		this.zip_code = zipCode;
+	}
 	public UUID getUuid() {
 		return uuid;
 	}
@@ -62,10 +77,10 @@ public class Location {
 	public void setCity(String city) {
 		this.city = city;
 	}
-	public UUID getState() {
+	public State getState() {
 		return state;
 	}
-	public void setState(UUID state) {
+	public void setState(State state) {
 		this.state = state;
 	}
 	public int getZip_code() {

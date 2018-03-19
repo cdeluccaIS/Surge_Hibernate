@@ -1,67 +1,77 @@
 package scc.hibernate.surge.dto;
 
 import java.util.UUID;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity (name="ACAS_ARF_Device")
 public class ACAS_ARF_Device{
 	@Id
 	@Column (name="uuid")
 	private UUID uuid;
-	@Column (name="deviceID")
-	private UUID deviceID;
-	@Column (name="identifiers")
-	private UUID identifiers;
-	@Column (name="op_attr")
-	private UUID op_attr;
-	@Column (name="configuration")
-	private UUID configuration;
+	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+	@JoinColumn(name="deviceID")
+	private ACAS_ARF_deviceID deviceID;
+	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+	@JoinColumn(name="identifiers")
+	private ACAS_ARF_Identifier identifiers;
+	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+	@JoinColumn(name="op_attr")
+	private ACAS_ARF_OPATTR op_attr;
+	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+	@JoinColumn(name="configuration")
+	private ACAS_ARF_Config configuration;
 	@Column (name="timestamp")
-	private long timestamp;
-	@Column (name="tagged")
-	private UUID tagged;
+	private Date timestamp;
+	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+	@JoinColumn(name="tagged")
+	private ACAS_ARF_Tagged tagged;
+	
 	public UUID getUuid() {
 		return uuid;
 	}
 	public void setUuid(UUID uuid) {
 		this.uuid = uuid;
 	}
-	public UUID getDeviceID() {
+	public ACAS_ARF_deviceID getDeviceID() {
 		return deviceID;
 	}
-	public void setDeviceID(UUID deviceID) {
+	public void setDeviceID(ACAS_ARF_deviceID deviceID) {
 		this.deviceID = deviceID;
 	}
-	public UUID getIdentifiers() {
+	public ACAS_ARF_Identifier getIdentifiers() {
 		return identifiers;
 	}
-	public void setIdentifiers(UUID identifiers) {
+	public void setIdentifiers(ACAS_ARF_Identifier identifiers) {
 		this.identifiers = identifiers;
 	}
-	public UUID getOp_attr() {
+	public ACAS_ARF_OPATTR getOp_attr() {
 		return op_attr;
 	}
-	public void setOp_attr(UUID op_attr) {
+	public void setOp_attr(ACAS_ARF_OPATTR op_attr) {
 		this.op_attr = op_attr;
 	}
-	public UUID getConfiguration() {
+	public ACAS_ARF_Config getConfiguration() {
 		return configuration;
 	}
-	public void setConfiguration(UUID configuration) {
+	public void setConfiguration(ACAS_ARF_Config configuration) {
 		this.configuration = configuration;
 	}
-	public long getTimestamp() {
+	public Date getTimestamp() {
 		return timestamp;
 	}
-	public void setTimestamp(long timestamp) {
+	public void setTimestamp(Date timestamp) {
 		this.timestamp = timestamp;
 	}
-	public UUID getTagged() {
+	public ACAS_ARF_Tagged getTagged() {
 		return tagged;
 	}
-	public void setTagged(UUID tagged) {
+	public void setTagged(ACAS_ARF_Tagged tagged) {
 		this.tagged = tagged;
 	}
 	

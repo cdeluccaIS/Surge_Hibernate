@@ -17,7 +17,13 @@ public class Agencies {
 	private String agency_code = "default";
 	@Column (name="location_id")
 	private String location_id;
-	
+	public Agencies(){
+	}
+	public Agencies(String agencyName, String agencyCode, String locId){
+		this.agency_name = agencyName;
+		this.agency_code = agencyCode;
+		this.location_id = locId;
+	}
 	public UUID getUuid() {
 		return uuid;
 	}

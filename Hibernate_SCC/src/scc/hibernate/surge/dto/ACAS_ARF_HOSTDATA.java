@@ -1,9 +1,12 @@
 package scc.hibernate.surge.dto;
 
-import java.util.UUID;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity (name="ACAS_ARF_HOSTDATA")
 public class ACAS_ARF_HOSTDATA{
@@ -12,8 +15,10 @@ public class ACAS_ARF_HOSTDATA{
 	private UUID uuid;
 	@Column (name="macAddress")
 	private String macAddress;
-	@Column (name="connectionIP")
-	private UUID connectionIP;
+	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+    	@JoinColumn(name="connectionIP")
+	private ACAS_ARF_IP connectionIP;
+	
 	public UUID getUuid() {
 		return uuid;
 	}
@@ -26,10 +31,10 @@ public class ACAS_ARF_HOSTDATA{
 	public void setMacAddress(String macAddress) {
 		this.macAddress = macAddress;
 	}
-	public UUID getConnectionIP() {
+	public ACAS_ARF_IP getConnectionIP() {
 		return connectionIP;
 	}
-	public void setConnectionIP(UUID connectionIP) {
+	public void setConnectionIP(ACAS_ARF_IP connectionIP) {
 		this.connectionIP = connectionIP;
 	}
 }
