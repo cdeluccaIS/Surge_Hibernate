@@ -19,6 +19,7 @@ public class Country {
 		this.name = name;
 		this.code = abbr;
 	}
+
 	public UUID getUuid() {
 		return uuid;
 	}
