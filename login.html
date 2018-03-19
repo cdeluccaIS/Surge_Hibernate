@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--scc main header-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>LOGIN | SCC</title>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="js/custom.js"></script>
+        <script src="js/sc/access.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    </head>
+    <body>
+        <div id="container">
+            <div id="sccHeader">
+                <div id="sccHeaderContent">
+                    <div class="logo">
+                        <a href="#" target="_parent">
+                            <img src="images/scc.png" alt="SCC Logo" width="120" height="110" border="0">
+                        </a>
+                    </div>
+                    <div id="logoText">
+                        <p>Security Coordination Center</p>
+                    </div>
+                    <div id="sccMainNav">
+                        <ul>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+                    <div id="sccSecondNav">
+                        <ul>
+<!--                            <li><a href="#" >User: TestUsername</a></li>
+                            <li><a href="#" >Log Off</a></li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--content wrapper-->
+            <div class="container" style="padding-top:25px;">
+                <div class="row">
+                    <div class="col-md-6" style="padding-top:40px;">
+                        <form class="form-signin" action="admin_home_page.html" id="login">
+                            <div class="form-group row">
+                                <label  class="col-sm-2 col-form-label"><h3>Username</h3></label>
+                                <div class="col-sm-10">
+                                    <input type="text" id="usernamelogin" class="form-control" placeholder="Username">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label"><h3>Password</h3></label>
+                                <div class="col-sm-10">
+                                    <input type="password" id="inputPassword" class="form-control" placeholder="Password">
+                                </div>
+                            </div>
+                            <div class="btn-group col-md-6" style="padding:10px;">
+                                <span class="col-md-12">
+                                    <button id="scLogin" class="btn btn-sm btn-success btn-block" type="submit">LOGIN</button>
+                                    <label class="text-primary" style="padding-top: 10px; padding-left:40px;">Forgot My Password
+                                    </label>  
+                                </span>
+
+                                <span class="col-md-12">
+                                    <a class="btn btn-sm btn-primary btn-block btn-sccblue" href="admin_add_user.html" data-placement="right" data-html="true" 
+                                   title="Register User" data-toggle="modal" data-target="#addUserModalCenter">REGISTER</a>
+                                    <label class="text-primary" style="padding-top: 10px;">  </label>  
+                                </span>
+                            </div>  
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="text-primary">SCC Notice</h2>
+                        <div class="border border-dark">
+                            <p style="padding:10px;">Lorem ipsum dolor sit amet, qui id elitr diceret, vim ne partiendo consulatu deterruisset. Te ferri everti oportere est. Sea cu laudem ubique neglegentur. Doctus tibique convenire ad his, usu et quas tempor. Altera appareat verterem in vix, te eam tantas altera, nibh insolens id nam. Id ignota salutatus eum, te nullam patrioque ius, eu per quod debitis philosophia.</p>
+                            <p style="padding:10px;">Case ridens ne eum, ad mucius definiebas his, nec ne doming audire iudicabit. Pro in novum lobortis, et mel salutatus vulputate. Quis tritani ancillae te est, eu congue maiestatis usu, affert assentior eam ad. At mei sale augue deleniti.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+            <footer class="my-5 pt-5 text-muted text-center text-small">
+                <p class="mb-1">© 2018 SCC Management System</p>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#">SCC Website </a></li>|
+                    <li class="list-inline-item"><a href="#">Contact </a></li>|
+                    <li class="list-inline-item"><a href="#">About </a></li>
+                </ul>
+            </footer>
+        </div><!--end of footer-->
+        <div class="modal fade" id="addUserModalCenter" tabindex="-1" role="dialog" aria-labelledby="addUserModalCenter" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content scc-border-default">
+                    <div class="modal-header scc-backgound-default">
+                        <h5 class="modal-title" id="ModalLongTitle">Create A new Account</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form action="#" name="addUser" id="addUser">
+                        <div class="modal-body">
+
+                            <div class="col-md-12">
+                                <div class="form-row">
+                                    <div class="col-md-12 mb-3">
+                                        <label for="validationTooltip01">Username</label>
+                                        <input type="text" class="form-control" id="username" placeholder="Username" required>
+                                    </div>
+                                    </div>
+                                <div class="form-row">
+                                    
+                                    <div class="col-md-8 mb-3">
+                                        <label for="validationTooltip01">First name</label>
+                                        <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="" required>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="validationTooltip02">MI</label>
+                                        <input type="text" class="form-control" id="validationTooltip02" placeholder="MI" value="" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-12 mb-3">
+                                        <label for="validationTooltip01">Last name</label>
+                                        <input type="text" class="form-control" id="validationTooltip03" placeholder="Last name" value="" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-12 mb-3">
+                                        <label for="validationTooltip01">Agency</label>
+                                        <input type="text" class="form-control" id="validationTooltip04" placeholder="Agency">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-12 mb-3">
+                                        <label for="validationTooltip01">Email</label>
+                                        <input type="email" class="form-control" id="validationTooltip04" placeholder="Email">
+                                        <div class="valid-tooltip">
+                                            Looks good!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-12 mb-3">
+                                        <label for="validationTooltip01">Secure Phone Number</label>
+                                        <input type="text" class="form-control" id="validationTooltip05" placeholder="Secure Phone Number">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-12 mb-3">
+                                        <label for="validationTooltip01">Unsecure Phone Number</label>
+                                        <input type="text" class="form-control" id="validationTooltip06" placeholder="Unsecure Phone Number">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-sm btn-warning btn-sccgold">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!--modal Register user-->
+        <div class="modal fade" id="registerModalCenter" tabindex="-1" role="dialog" aria-labelledby="registerModalCenter" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content scc-border-default">
+                <div class="modal-header scc-backgound-default">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Successful</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Registration Successful
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--modal check input -->
+        <div class="modal fade" id="validateLogin" tabindex="-1" role="dialog" aria-labelledby="validateLogin" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content scc-border-default">
+                    <div class="modal-header scc-backgound-default">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Error!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Username and/or Password cannot be left blank.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">OK</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--modal User Already Exist input -->
+        <div class="modal fade" id="userExists" tabindex="1" role="dialog" aria-labelledby="userExist" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content scc-border-default">
+                    <div class="modal-header scc-backgound-default">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Invalid Username</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-center">Username already in use or<br/>currently in a pending status</p>
+<!--                        <p class="text-center">Please contact system administrator for assistance</p>
+                        <p class="text-center" style="border-color: #E7B539; border-top-style: solid; border-bottom-style: solid ">System Administrator Contact Information <br/> Email Address: administrator@scc.org <br/>Phone Number: 222-222-2222</p>-->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btn-sm " data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="loginFailed" tabindex="1" role="dialog" aria-labelledby="loginFailed" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content scc-border-default">
+                    <div class="modal-header scc-backgound-default">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Login Failed</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-center">Login Attempt unsuccessful<br/>Please try again</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btn-sm " data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="toManyLogin" tabindex="-1" role="dialog" aria-labelledby="toManyLogin" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content scc-border-default">
+              <div class="modal-header scc-backgound-default">
+                <h5 class="modal-title" id="ModalLongTitle">Login Failed</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                To many Unsuccessful login attempts<br>
+               have been made; [username] <br> account has been locked. 
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">OK</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </body>
+</html>
+
+
