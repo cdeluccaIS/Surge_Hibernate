@@ -89,6 +89,7 @@
         <mapping class="scc.hibernate.surge.dto.ACAS_ARF_AN"/>
         <mapping class="scc.hibernate.surge.dto.ACAS_ASR_Result"/>
         <mapping class="scc.hibernate.surge.dto.ACAS_ARF_IP"/>
+        <mapping class="scc.hibernate.surge.dto.TwistLock"/>
         
     </session-factory>
  
