@@ -48,7 +48,7 @@ public class ACAS_ARF_DeviceDAO {
 		query.setParameter("ident",acas_arf_device.getIdentifiers());
 		query.setParameter("op_attr",acas_arf_device.getOp_attr());
 		query.setParameter("config",acas_arf_device.getConfiguration());
-		query.setLong("timestamp",acas_arf_device.getTimestamp());
+		query.setParameter("timestamp",acas_arf_device.getTimestamp());
 		query.setParameter("tag",acas_arf_device.getTagged());
 		
 		int rowCount = query.executeUpdate();

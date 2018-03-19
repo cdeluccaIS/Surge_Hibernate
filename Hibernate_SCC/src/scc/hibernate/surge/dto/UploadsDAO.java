@@ -57,7 +57,7 @@ public class UploadsDAO {
 		query.setParameter("state", upload.getState());
 		query.setParameter("authority", upload.getAuthority());
 		query.setParameter("status", upload.getStatus());
-		query.setLong("timestamp",  upload.getTimestamp());
+		query.setParameter("timestamp",  upload.getTimestamp());
 		
 		int rowCount = query.executeUpdate();
 		System.out.println("Rows affected: " + rowCount);

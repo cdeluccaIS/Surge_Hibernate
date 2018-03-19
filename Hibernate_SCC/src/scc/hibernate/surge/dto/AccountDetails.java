@@ -42,7 +42,7 @@ public class AccountDetails {
     private String city = "--";
 	@ManyToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
 	@JoinColumn(name="state")
-    private State state = "--";
+    private State state;
 	@Column (name="ZipCode")
     private int ZipCode = 12345;
 	@Column (name="accountType")
@@ -134,7 +134,7 @@ public class AccountDetails {
 		this.city = city;
 	}
 	public State getState() {
-		return State;
+		return state;
 	}
 	public void setState(State state) {
 		this.state = state;

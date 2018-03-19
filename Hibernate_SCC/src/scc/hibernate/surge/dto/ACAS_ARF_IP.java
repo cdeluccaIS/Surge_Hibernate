@@ -11,9 +11,9 @@ public class ACAS_ARF_IP{
 	@Column (name="uuid")
 	private UUID uuid;
 	@Column (name="IPV4")
-	private String ipv4;
+	private String ipv4  = "xxx.xxx.xxx.xxx";
 	@Column (name="IPV6")
-	private String ipv6;
+	private String ipv6 = "ffff.ffff.ffff.ffff.ffff.ffff.ffff.ffff";
 	public UUID getUuid() {
 		return uuid;
 	}
